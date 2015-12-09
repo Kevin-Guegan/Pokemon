@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="Pokemon.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Pokemon"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="pokedexButton" Content="Pokedex" HorizontalAlignment="Left" Margin="65,203,0,0" VerticalAlignment="Top" Width="231" Tapped="On_Pokedex_Tapped" Background="#FF1F396F" Foreground="#FFFDFDFD"/>
+        <Button x:Name="combatButton" Content="Combat" HorizontalAlignment="Left" Margin="65,240,0,0" VerticalAlignment="Top" Width="231" Tapped="On_Combat_Tapped" Background="#FF1F396F" Foreground="#FFFDFDFD"/>
+        <Button x:Name="concoursButton" Content="Concours beauté" HorizontalAlignment="Left" Margin="65,277,0,0" VerticalAlignment="Top" Width="231" Tapped="On_Concours_Tapped" Background="#FF1F396F" Foreground="#FFFDFDFD"/>
+        <Button x:Name="promenadeButton" Content="Promenade" HorizontalAlignment="Left" Margin="65,314,0,0" VerticalAlignment="Top" Width="231" Tapped="On_Promenade_Tapped" Background="#FF1F396F" Foreground="White"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="121" Margin="0,10,0,0" VerticalAlignment="Top" Width="360"/>
+
+    </Grid>
+</Page>
