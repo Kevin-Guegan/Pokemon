@@ -12,7 +12,8 @@
         <Button x:Name="combatButton" Content="Combat" HorizontalAlignment="Left" Margin="65,240,0,0" VerticalAlignment="Top" Width="231" Tapped="On_Combat_Tapped" Background="#FF1F396F" Foreground="#FFFDFDFD"/>
         <Button x:Name="concoursButton" Content="Concours beauté" HorizontalAlignment="Left" Margin="65,277,0,0" VerticalAlignment="Top" Width="231" Tapped="On_Concours_Tapped" Background="#FF1F396F" Foreground="#FFFDFDFD"/>
         <Button x:Name="promenadeButton" Content="Promenade" HorizontalAlignment="Left" Margin="65,314,0,0" VerticalAlignment="Top" Width="231" Tapped="On_Promenade_Tapped" Background="#FF1F396F" Foreground="White"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="121" Margin="0,10,0,0" VerticalAlignment="Top" Width="360"/>
-
+        <Image x:Name="image" HorizontalAlignment="Left" Height="121" Margin="10,0,-10,0" VerticalAlignment="Top" Width="360" Source="ms-appx:///Assets/Logo-Pokemon.jpg"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="145" Margin="102,428,0,0" VerticalAlignment="Top" Width="157" Source="ms-appx:///Assets/Pikachu.png"/>
+        
     </Grid>
 </Page>
