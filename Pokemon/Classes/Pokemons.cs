@@ -11,13 +11,17 @@ namespace Pokemon.Classes
     {
         public string Name { get; set; }
 
-        public int Weight { get; set; }
+        public string Weight { get; set; }
 
-        public int Height { get; set; }
+        public string Height { get; set; }
 
-        public int Number { get; set; }
+        public string Number { get; set; }
 
-        public int Health { get; set; }
+        public string Health { get; set; }
+
+        public string Description { get; set; }
+
+        public string Type { get; set; }
 
         internal List<Attack> Attack { get; set; }
 
@@ -34,7 +38,7 @@ namespace Pokemon.Classes
 
         }
 
-        public Pokemons(string name, int weight, int height, int number, int health, List<Attack> attack, List<Dress> dress, Image imgpokedex, Image imgdress, Image imgfight)
+        public Pokemons(string name, string weight, string height, string Description, string type, string number, string health, List<Attack> attack, List<Dress> dress, Image imgpokedex, Image imgdress, Image imgfight)
         {
             this.Name = name;
             this.Weight = weight;
