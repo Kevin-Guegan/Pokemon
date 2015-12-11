@@ -101,6 +101,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Attack.cs" />
+    <Compile Include="Classes\Dress.cs" />
+    <Compile Include="Classes\Pokemons.cs" />
     <Compile Include="Pages\Combat.xaml.cs">
       <DependentUpon>Combat.xaml</DependentUpon>
     </Compile>
