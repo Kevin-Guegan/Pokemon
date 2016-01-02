@@ -8,12 +8,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid>
             <Grid.Background>
                 <ImageBrush AlignmentX="Left" AlignmentY="Bottom" Stretch="Uniform" ImageSource="ms-appx:///Assets/bg_pokeball.png"/>
             </Grid.Background>
-     
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="25"/>
                 <ColumnDefinition Width="1*"/>
@@ -29,11 +30,23 @@
                 <RowDefinition Height="0*"/>
             </Grid.RowDefinitions>
             <Image x:Name="logo" Grid.Column="1" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,15,0,15" Source="ms-appx:///Assets/logo.png"/>
-            <usersControls:HomeButton x:Name="pokedexButton" Grid.Column="1" Grid.Row="1" Tapped="On_Pokedex_Tapped"></usersControls:HomeButton>
+            <usersControls:HomeButton x:Name="pokedexButton" Grid.Column="1" Grid.Row="1" Tapped="On_Pokedex_Tapped" Content="{Binding TextPokedex}"></usersControls:HomeButton>
             <usersControls:HomeButton x:Name="combatButton" Grid.Column="1" Grid.Row="2" Tapped="On_Combat_Tapped"></usersControls:HomeButton>
             <usersControls:HomeButton x:Name="concoursButton" Grid.Column="1" Grid.Row="3" Tapped="On_Concours_Tapped"></usersControls:HomeButton>
             <usersControls:HomeButton x:Name="promenadeButton" Grid.Column="1" Grid.Row="4" Tapped="On_Promenade_Tapped"></usersControls:HomeButton>
-            <Image x:Name="pokemon1" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0,15,0,15"  Source="ms-appx:///Assets/Pikachu.png"/>
+            <ListView Grid.Column="1" Grid.Row="5" Margin="0,15,0,15" HorizontalAlignment="Center" VerticalAlignment="Stretch">
+                <ListView.Items>
+                    <ListViewItem>
+                        <Image x:Name="pokemon1" Source="ms-appx:///Assets/Pikachu.png" Height="auto" Width="auto"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <Image x:Name="pokemon2" Source="ms-appx:///Assets/carapuce.png" Height="auto" Width="auto"/>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <Image x:Name="pokemon3" Source="ms-appx:///Assets/salameche.png" Height="auto" Width="auto"/>
+                    </ListViewItem>
+                </ListView.Items>
+            </ListView>
         </Grid>
     </Grid>
 </Page>

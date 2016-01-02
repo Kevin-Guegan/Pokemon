@@ -47,5 +47,19 @@ namespace Pokemon
         {
             (Window.Current.Content as Frame).Navigate(typeof(Promenade));
         }
+
+
+        public object TextPokedex
+        {
+            get {
+                return (string)GetValue(TextPokedexProperty);
+            }
+            set {
+                SetValue(TextPokedexProperty, value);
+            }
+        }
+        public static readonly DependencyProperty TextPokedexProperty =
+        DependencyProperty.Register("Pokedex", typeof(string),
+        typeof(MainPage), new PropertyMetadata(null));
     }
 }

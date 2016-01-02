@@ -22,8 +22,8 @@
             </Setter>
         </Style>
     </UserControl.Resources>
-    
+
     <Grid>
-        <Button Style="{StaticResource HomeButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,15" Foreground="#FFFFFFFF"/>
+        <Button Style="{StaticResource HomeButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,15" Foreground="#FFFFFFFF" FontFamily="Arial"/>
     </Grid>
 </UserControl>
