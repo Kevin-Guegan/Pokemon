@@ -1,4 +1,5 @@
-﻿using Pokemon.Pages;
+﻿using Pokemon.Classes;
+using Pokemon.Pages;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,9 +24,43 @@ namespace Pokemon
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public int indexListe;
         public MainPage()
         {
             this.InitializeComponent();
+
+            indexListe = 1;
+            var pokemon = Pokemons.GetPokemonById(indexListe);
+
+            imageList.Source = pokemon.ImgPokedex;
+        }
+
+        private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            indexListe++;
+            var pokemon = Pokemons.GetPokemonById(indexListe);
+            if (pokemon != null)
+            {
+                imageList.Source = pokemon.ImgPokedex;
+            }
+            else
+            {
+                indexListe--;
+            }
+        }
+
+        private void On_imageNavLeft_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            indexListe--;
+            var pokemon = Pokemons.GetPokemonById(indexListe);
+            if (pokemon != null)
+            {
+                imageList.Source = pokemon.ImgPokedex;
+            }
+            else
+            {
+                indexListe++;
+            }
         }
 
         private void On_Pokedex_Tapped(object sender, TappedRoutedEventArgs e)
@@ -47,19 +82,5 @@ namespace Pokemon
         {
             (Window.Current.Content as Frame).Navigate(typeof(Promenade));
         }
-
-
-        public object TextPokedex
-        {
-            get {
-                return (string)GetValue(TextPokedexProperty);
-            }
-            set {
-                SetValue(TextPokedexProperty, value);
-            }
-        }
-        public static readonly DependencyProperty TextPokedexProperty =
-        DependencyProperty.Register("Pokedex", typeof(string),
-        typeof(MainPage), new PropertyMetadata(null));
     }
 }
