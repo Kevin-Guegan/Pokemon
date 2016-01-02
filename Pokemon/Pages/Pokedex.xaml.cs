@@ -53,7 +53,7 @@ namespace Pokemon.Pages
             Pokemons pokemon = new Pokemons();
 
             pokemon.Name = this.NamePokemon.Text;
-                
+            
             if (pokemon.Name == "Pikachu")
             {
                 pokemon.Name = "Carapuce";
@@ -62,6 +62,8 @@ namespace Pokemon.Pages
                 pokemon.Height = "0.5 m";
                 pokemon.Description = "Il se réfugie dans sa carapace et réplique en éclaboussant l'ennemi à la première occasion.";
                 pokemon.Type = "Eau.";
+                
+
             }
             else if(pokemon.Name == "Salamèche")
             {
@@ -80,6 +82,7 @@ namespace Pokemon.Pages
             WeightValue.Text = pokemon.Weight;
             DescriptionPokemon.Text = pokemon.Description;
             TypePokemon.Text = pokemon.Type;
+            
         }
 
         private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)
