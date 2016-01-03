@@ -24,98 +24,65 @@ namespace Pokemon.Pages
     /// </summary>
     public sealed partial class Pokedex : Page
     {
+        public int indexListe;
         /// <summary>
         /// 
         /// </summary>
         public Pokedex()
         {
             this.InitializeComponent();
-            Pokemons pokemon = new Pokemons();
 
-            pokemon.Name = "Pikachu";
-            pokemon.Number = "#025";
-            pokemon.Weight = "6.0 kg";
-            pokemon.Height = "0.4 m";
-            pokemon.Description = "Sa queue est dressée quand il est aux aguets.";
-            pokemon.Type = "Foudre.";
+            indexListe = 1;
+            var pokemon = Pokemons.GetPokemonById(indexListe);
             
+            image.Source = pokemon.ImgPokedex;
             NamePokemon.Text = pokemon.Name;
             NumberPokemon.Text = pokemon.Number;
             HeightValue.Text = pokemon.Height;
             WeightValue.Text = pokemon.Weight;
             DescriptionPokemon.Text = pokemon.Description;
             TypePokemon.Text = pokemon.Type;
-
         }
 
         private void On_imageNavLeft_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Pokemons pokemon = new Pokemons();
-
-            pokemon.Name = this.NamePokemon.Text;
-            String toot = image.Source.ToString();
-            if (pokemon.Name == "Pikachu")
+            indexListe--;
+            var pokemon = Pokemons.GetPokemonById(indexListe);
+            if (pokemon != null)
             {
-                pokemon.Name = "Carapuce";
-                pokemon.Number = "#007";
-                pokemon.Weight = "9.0 kg";
-                pokemon.Height = "0.5 m";
-                pokemon.Description = "Il se réfugie dans sa carapace et réplique en éclaboussant l'ennemi à la première occasion.";
-                pokemon.Type = "Eau.";
-                toot = "ms-appx:///Assets/Carapuce.png";
+                image.Source = pokemon.ImgPokedex;
+                NamePokemon.Text = pokemon.Name;
+                NumberPokemon.Text = pokemon.Number;
+                HeightValue.Text = pokemon.Height;
+                WeightValue.Text = pokemon.Weight;
+                DescriptionPokemon.Text = pokemon.Description;
+                TypePokemon.Text = pokemon.Type;
 
             }
-            else if(pokemon.Name == "Salamèche")
+            else
             {
-                pokemon.Name = "Pikachu";
-                pokemon.Number = "#025";
-                pokemon.Weight = "6.0 kg";
-                pokemon.Height = "0.4 m";
-                pokemon.Description = "Sa queue est dressée quand il est aux aguets.";
-                pokemon.Type = "Foudre.";
+                indexListe++;
             }
-            
-
-            NamePokemon.Text = pokemon.Name;
-            NumberPokemon.Text = pokemon.Number;
-            HeightValue.Text = pokemon.Height;
-            WeightValue.Text = pokemon.Weight;
-            DescriptionPokemon.Text = pokemon.Description;
-            TypePokemon.Text = pokemon.Type;
-            image.Source = toot;
         }
 
         private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Pokemons pokemon = new Pokemons();
-
-            pokemon.Name = this.NamePokemon.Text;
-
-            if (pokemon.Name == "Pikachu")
+            indexListe++;
+            var pokemon = Pokemons.GetPokemonById(indexListe);
+            if (pokemon != null)
             {
-                pokemon.Name = "Salamèche";
-                pokemon.Number = "#004";
-                pokemon.Weight = "8.5 kg";
-                pokemon.Height = "0.6 m";
-                pokemon.Description = "La flamme de sa queue symbolise sa vitalité. Elle est intense quand il est en bonne santé.";
-                pokemon.Type = "Feu.";
+                image.Source = pokemon.ImgPokedex;
+                NamePokemon.Text = pokemon.Name;
+                NumberPokemon.Text = pokemon.Number;
+                HeightValue.Text = pokemon.Height;
+                WeightValue.Text = pokemon.Weight;
+                DescriptionPokemon.Text = pokemon.Description;
+                TypePokemon.Text = pokemon.Type;
             }
-            else if (pokemon.Name == "Carapuce")
+            else
             {
-                pokemon.Name = "Pikachu";
-                pokemon.Number = "#025";
-                pokemon.Weight = "6.0 kg";
-                pokemon.Height = "0.4 m";
-                pokemon.Description = "Sa queue est dressée quand il est aux aguets.";
-                pokemon.Type = "Foudre.";
+                indexListe--;
             }
-
-            NamePokemon.Text = pokemon.Name;
-            NumberPokemon.Text = pokemon.Number;
-            HeightValue.Text = pokemon.Height;
-            WeightValue.Text = pokemon.Weight;
-            DescriptionPokemon.Text = pokemon.Description;
-            TypePokemon.Text = pokemon.Type;
         }
     }
 }
