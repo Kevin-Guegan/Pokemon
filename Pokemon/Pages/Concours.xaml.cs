@@ -22,9 +22,44 @@ namespace Pokemon.Pages
     /// </summary>
     public sealed partial class Concours : Page
     {
+        public int indexListe;
+
         public Concours()
         {
             this.InitializeComponent();
+            indexListe = 1;
+            var pokemon = Pokemons.GetPokemonById(indexListe);
+
+            imageList.Source = pokemon.ImgPokedex;
         }
+
+        private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            indexListe++;
+            var pokemon = Pokemons.GetPokemonById(indexListe);
+            if (pokemon != null)
+            {
+                imageList.Source = pokemon.ImgPokedex;
+            }
+            else
+            {
+                indexListe--;
+            }
+        }
+
+        private void On_imageNavLeft_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            indexListe--;
+            var pokemon = Pokemons.GetPokemonById(indexListe);
+            if (pokemon != null)
+            {
+                imageList.Source = pokemon.ImgPokedex;
+            }
+            else
+            {
+                indexListe++;
+            }
+        }
+
     }
 }

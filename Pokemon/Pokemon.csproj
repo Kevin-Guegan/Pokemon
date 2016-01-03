@@ -135,6 +135,7 @@
     <None Include="Pokemon_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\bg_concours_motif.jpg" />
     <Content Include="Assets\bg_nav_exit.png" />
     <Content Include="Assets\bg_nav_home.png" />
     <Content Include="Assets\bg_nav_left.png" />
@@ -144,6 +145,13 @@
     <Content Include="Assets\carapuce.png" />
     <Content Include="Assets\Logo-Pokemon.jpg" />
     <Content Include="Assets\logo.png" />
+    <Content Include="Assets\pikachu-beaute-chaussure.png" />
+    <Content Include="Assets\pikachu-beaute-haut.png" />
+    <Content Include="Assets\pikachu-beaute-jupe.png" />
+    <Content Include="Assets\pikachu-beaute-manchette.png" />
+    <Content Include="Assets\pikachu-beaute-noeud.png" />
+    <Content Include="Assets\pikachu-beaute-nu.png" />
+    <Content Include="Assets\pikachu-beaute-queue.png" />
     <Content Include="Assets\Pikachu.png" />
     <Content Include="Assets\pikachu_mirroir.png" />
     <Content Include="Assets\salameche.png" />
