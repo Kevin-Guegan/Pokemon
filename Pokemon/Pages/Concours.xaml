@@ -7,69 +7,88 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid>
-            <Grid.Background>
-                <ImageBrush ImageSource="ms-appx:///Assets/bg_concours_motif.jpg" Stretch="None" AlignmentX="Left" AlignmentY="Top" />
-            </Grid.Background>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/bg_concours_motif.jpg" Stretch="None" AlignmentX="Left" AlignmentY="Top" />
+        </Grid.Background>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0*"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="100"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0*"/>
-                <ColumnDefinition Width="40"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="40"/>
-            </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="40"/>
+        </Grid.ColumnDefinitions>
 
-            <Grid Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5" Background="Black" Opacity="0.5"></Grid>
-            <Image Grid.Row="6" Grid.Column="1" x:Name="imageNavLeft" Height="30" Width="31" HorizontalAlignment="Right"
+        <Grid Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5" Background="Black" Opacity="0.5"></Grid>
+        <Image Grid.Row="6" Grid.Column="1" x:Name="imageNavLeft" Height="30" Width="31" HorizontalAlignment="Right"
                    Source="ms-appx:///Assets/bg_nav_left.png" Tapped="On_imageNavLeft_Tapped">
-            </Image>
-            <Image Grid.Row="6" Grid.Column="5" x:Name="imageNavRight" Height="30" Width="31" HorizontalAlignment="Left"
+        </Image>
+        <Image Grid.Row="6" Grid.Column="5" x:Name="imageNavRight" Height="30" Width="31" HorizontalAlignment="Left"
                    Source="ms-appx:///Assets/bg_nav_right.png" Tapped="On_imageNavRight_Tapped">
-            </Image>
+        </Image>
 
-            
-            <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-nu.png" >
-            </Image>
-            <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-chaussure.png" 
+
+        <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-nu.png" >
+        </Image>
+        <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-chaussure.png" 
                    Opacity="0" x:Name="habit1">
-            </Image>
-            <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-haut.png" 
+        </Image>
+        <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-haut.png" 
                    Opacity="0" x:Name="habit2">
-            </Image>
-            <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-jupe.png" 
+        </Image>
+        <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-jupe.png" 
                    Opacity="0" x:Name="habit3">
-            </Image>
-            <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-manchette.png" 
+        </Image>
+        <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-manchette.png" 
                    Opacity="0" x:Name="habit4">
-            </Image>
-            <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-noeud.png" 
+        </Image>
+        <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-noeud.png" 
                    Opacity="0" x:Name="habit5">
-            </Image>
-            <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-queue.png" 
+        </Image>
+        <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-queue.png" 
                    Opacity="0" x:Name="habit6">
-            </Image>
+        </Image>
 
-            <Grid Grid.Row="6" Grid.Column="2" Background="White" Margin="10,15,10,15">
-                <Image x:Name="image1" Source="ms-appx:///Assets/pikachu-beaute-haut.png" Margin="-52,-93,-102,-53"></Image>
-            </Grid>
-            <Grid Grid.Row="6" Grid.Column="3" Background="White" Margin="10,15,10,15">
-                <Image x:Name="image2" Margin="-3,-83,-23,-40" Source="ms-appx:///Assets/pikachu-beaute-jupe.png" ></Image>
-            </Grid>
-            <Grid Grid.Row="6" Grid.Column="4" Background="White" Margin="10,15,10,15">
-                <Image x:Name="image3" Margin="-12,-56,-56,-149" Source="ms-appx:///Assets/pikachu-beaute-noeud.png" ></Image>
-            </Grid>
+        <Grid Grid.Row="6" Grid.Column="2" Background="White" Margin="10,15,10,15">
+            <Image x:Name="image1" Source="ms-appx:///Assets/pikachu-beaute-haut.png" Margin="-52,-93,-102,-53"></Image>
         </Grid>
+        <Grid Grid.Row="6" Grid.Column="3" Background="White" Margin="10,15,10,15">
+            <Image x:Name="image2" Margin="-3,-83,-23,-40" Source="ms-appx:///Assets/pikachu-beaute-jupe.png" ></Image>
+        </Grid>
+        <Grid Grid.Row="6" Grid.Column="4" Background="White" Margin="10,15,10,15">
+            <Image x:Name="image3" Margin="-12,-56,-56,-149" Source="ms-appx:///Assets/pikachu-beaute-noeud.png" ></Image>
+        </Grid>
+
+        <Pivot Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5" x:Name="PokePivot" ItemsSource="{Binding}">
+            <Pivot.ItemTemplate>
+                <DataTemplate>
+                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="{Binding GetImageType}" Width="25" Height="25" Margin="0,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        <Grid VerticalAlignment="Stretch" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Padding="50">
+                            <Image Source="{Binding GetImage}"/>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </Pivot.ItemTemplate>
+        </Pivot>
     </Grid>
 </Page>

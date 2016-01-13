@@ -25,6 +25,7 @@ namespace Pokemon
     public sealed partial class MainPage : Page
     {
         public int indexListe;
+
         public MainPage()
         {
             this.InitializeComponent();

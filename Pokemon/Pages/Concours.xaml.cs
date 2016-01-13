@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dress.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,38 +28,18 @@ namespace Pokemon.Pages
         public Concours()
         {
             this.InitializeComponent();
-            indexListe = 1;
-            var pokemon = Pokemons.GetPokemonById(indexListe);
 
-            imageList.Source = pokemon.ImgPokedex;
+            var pokemon = Dresses.GetDressesList();
         }
 
         private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            indexListe++;
-            var pokemon = Pokemons.GetPokemonById(indexListe);
-            if (pokemon != null)
-            {
-                imageList.Source = pokemon.ImgPokedex;
-            }
-            else
-            {
-                indexListe--;
-            }
+
         }
 
         private void On_imageNavLeft_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            indexListe--;
-            var pokemon = Pokemons.GetPokemonById(indexListe);
-            if (pokemon != null)
-            {
-                imageList.Source = pokemon.ImgPokedex;
-            }
-            else
-            {
-                indexListe++;
-            }
+
         }
 
     }
