@@ -152,8 +152,13 @@
     <Content Include="Assets\pikachu-beaute-noeud.png" />
     <Content Include="Assets\pikachu-beaute-nu.png" />
     <Content Include="Assets\pikachu-beaute-queue.png" />
+    <Content Include="Assets\map.png" />
     <Content Include="Assets\Pikachu.png" />
     <Content Include="Assets\pikachu_mirroir.png" />
+    <Content Include="Assets\SachaBot.png" />
+    <Content Include="Assets\SachaLeft.png" />
+    <Content Include="Assets\SachaRight.png" />
+    <Content Include="Assets\SachaTop.png" />
     <Content Include="Assets\salameche.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
