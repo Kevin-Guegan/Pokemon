@@ -41,12 +41,14 @@ namespace Pokemon.Classes
 
         }
 
-        public Pokemons(int id, string name, string weight, string height, string Description, string type, string number, string health, List<Attack> attack, List<Dress> dress, BitmapImage imgPokedex, BitmapImage imgDress, BitmapImage imgFight)
+        public Pokemons(int id, string name, string weight, string height, string description, string type, string number, string health, List<Attack> attack, List<Dress> dress, BitmapImage imgPokedex, BitmapImage imgDress, BitmapImage imgFight)
         {
             this.Id = id;
             this.Name = name;
             this.Weight = weight;
             this.Height = height;
+            this.Description = description;
+            this.Type = type;
             this.Number = number;
             this.Health = health;
             this.Attack = attack;
@@ -84,8 +86,8 @@ namespace Pokemon.Classes
             {
                 uriImage = new Uri("ms-appx:///Assets/salameche.png");
                 image = new BitmapImage(uriImage);
-                pokemon = new Pokemons(3, "Salamèche", "", "", "",
-                    "", "", "", attacks, dresses, image, image, image);
+                pokemon = new Pokemons(3, "Salamèche", "8.5 kg", "0.6m", "La flamme de sa queue symbolise sa vitalité. Elle est intense quand il est en bonne santé.",
+                    "Feu", "#004", "10", attacks, dresses, image, image, image);
             }
             else
             {
