@@ -135,17 +135,24 @@
     <None Include="Pokemon_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\bg_nav_bot.png" />
     <Content Include="Assets\bg_nav_exit.png" />
     <Content Include="Assets\bg_nav_home.png" />
     <Content Include="Assets\bg_nav_left.png" />
     <Content Include="Assets\bg_nav_right.png" />
     <Content Include="Assets\bg_nav_save.png" />
+    <Content Include="Assets\bg_nav_top.png" />
     <Content Include="Assets\bg_pokeball.png" />
     <Content Include="Assets\carapuce.png" />
     <Content Include="Assets\Logo-Pokemon.jpg" />
     <Content Include="Assets\logo.png" />
+    <Content Include="Assets\map.png" />
     <Content Include="Assets\Pikachu.png" />
     <Content Include="Assets\pikachu_mirroir.png" />
+    <Content Include="Assets\SachaBot.png" />
+    <Content Include="Assets\SachaLeft.png" />
+    <Content Include="Assets\SachaRight.png" />
+    <Content Include="Assets\SachaTop.png" />
     <Content Include="Assets\salameche.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

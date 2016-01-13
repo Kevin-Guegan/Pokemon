@@ -1,5 +1,6 @@
 ﻿<Page
     x:Class="Pokemon.Pages.Promenade"
+    xmlns:usersControls="using:Pokemon.UsersControls"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Pokemon.Pages"
@@ -7,7 +8,21 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid Tapped="NavBotOnTapped">
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/map.png" Stretch="None" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <usersControls:Menu HorizontalAlignment="Right" VerticalAlignment="Top" Height="48" Opacity="5"></usersControls:Menu>
+        <Image x:Name="Player" Grid.Column="1" Grid.Row="1" Source="ms-appx:///Assets/SachaBot.png" Height="50"/>
+        <Image x:Name="NavTop" Grid.Column="1" Grid.Row="1" Source="ms-appx:///Assets/bg_nav_top.png" Height="50" Margin="0,430,0,0" Tapped="NavTopOnTapped"/>
+        <Image x:Name="NavLeft" Grid.Column="1" Grid.Row="1" Source="ms-appx:///Assets/bg_nav_left.png" Height="50" Margin="0,500,150,0" Tapped="NavLeftOnTapped"/>
+        <Image x:Name="NavRight" Grid.Column="1" Grid.Row="1" Source="ms-appx:///Assets/bg_nav_right.png" Height="50" Margin="150,500,0,0" Tapped="NavRightOnTapped"/>
+        <Image x:Name="NavBot" Grid.Column="1" Grid.Row="1" Source="ms-appx:///Assets/bg_nav_bot.png" Height="50" Margin="0,550,0,0"/>
     </Grid>
 </Page>
