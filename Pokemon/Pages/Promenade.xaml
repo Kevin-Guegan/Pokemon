@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Tapped="NavBotOnTapped">
+    <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="ms-appx:///Assets/map.png" Stretch="None" />
         </Grid.Background>
@@ -23,6 +23,6 @@
         <Image x:Name="NavTop" Grid.Column="1" Grid.Row="1" Source="ms-appx:///Assets/bg_nav_top.png" Height="50" Margin="0,430,0,0" Tapped="NavTopOnTapped"/>
         <Image x:Name="NavLeft" Grid.Column="1" Grid.Row="1" Source="ms-appx:///Assets/bg_nav_left.png" Height="50" Margin="0,500,150,0" Tapped="NavLeftOnTapped"/>
         <Image x:Name="NavRight" Grid.Column="1" Grid.Row="1" Source="ms-appx:///Assets/bg_nav_right.png" Height="50" Margin="150,500,0,0" Tapped="NavRightOnTapped"/>
-        <Image x:Name="NavBot" Grid.Column="1" Grid.Row="1" Source="ms-appx:///Assets/bg_nav_bot.png" Height="50" Margin="0,550,0,0"/>
+        <Image x:Name="NavBot" Grid.Column="1" Grid.Row="1" Source="ms-appx:///Assets/bg_nav_bot.png" Height="50" Margin="0,550,0,0" Tapped="NavBotOnTapped"/>
     </Grid>
 </Page>

@@ -50,7 +50,7 @@
                 </Flyout>
             </Button.Flyout>
         </Button>
-        <Button x:Name="buttonExit" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Button x:Name="buttonExit" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="ExitButtonOnTapped">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>

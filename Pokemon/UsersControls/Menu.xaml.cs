@@ -38,5 +38,10 @@ namespace Pokemon.UsersControls
         {
             buttonSave.Flyout.Hide();
         }
+
+        private void ExitButtonOnTapped(object sender, TappedRoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
     }
 }
