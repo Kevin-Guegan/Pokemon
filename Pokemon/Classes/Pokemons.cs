@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dress.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,7 @@ namespace Pokemon.Classes
 
         internal List<Attack> Attack { get; set; }
 
-        internal List<Dress> Dress { get; set; }
+        internal List<Dresses> Dress { get; set; }
 
         public BitmapImage ImgPokedex { get; set; }
 
@@ -41,7 +42,8 @@ namespace Pokemon.Classes
 
         }
 
-        public Pokemons(int id, string name, string weight, string height, string description, string type, string number, string health, List<Attack> attack, List<Dress> dress, BitmapImage imgPokedex, BitmapImage imgDress, BitmapImage imgFight)
+
+        public Pokemons(int id, string name, string weight, string height, string description, string type, string number, string health, List<Attack> attack, List<Dresses> dress, BitmapImage imgPokedex, BitmapImage imgDress, BitmapImage imgFight)
         {
             this.Id = id;
             this.Name = name;
@@ -63,7 +65,7 @@ namespace Pokemon.Classes
         public static Pokemons GetPokemonById(int id)
         {
             var attacks = new List<Attack>();
-            var dresses = new List<Dress>();
+            var dresses = new List<Dresses>();
             var pokemon = new Pokemons();
             Uri uriImage = new Uri("ms-appx:///");
             var image = new BitmapImage();

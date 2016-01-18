@@ -7,7 +7,80 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/bg_concours_motif.jpg" Stretch="None" AlignmentX="Left" AlignmentY="Top" />
+        </Grid.Background>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="40"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5" Background="Black" Opacity="0.5"></Grid>
+        
+        <Image Grid.Row="6" Grid.Column="1" x:Name="imageNavLeft" Height="30" Width="31" HorizontalAlignment="Right"
+                   Source="ms-appx:///Assets/bg_nav_left.png" Tapped="On_imageNavLeft_Tapped">
+        </Image>
+        <Image Grid.Row="6" Grid.Column="5" x:Name="imageNavRight" Height="30" Width="31" HorizontalAlignment="Left"
+                   Source="ms-appx:///Assets/bg_nav_right.png" Tapped="On_imageNavRight_Tapped">
+        </Image>
+
+
+        <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-nu.png" >
+        </Image>
+        <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-chaussure.png" 
+                   Opacity="0" x:Name="Chaussures">
+        </Image>
+        <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-haut.png" 
+                   Opacity="0" x:Name="Haut">
+        </Image>
+        <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-jupe.png" 
+                   Opacity="0" x:Name="Jupe">
+        </Image>
+        <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-manchette.png" 
+                   Opacity="0" x:Name="Manchettes">
+        </Image>
+        <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-noeud.png" 
+                   Opacity="0" x:Name="Noeud">
+        </Image>
+        <Image Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Source="ms-appx:///Assets/pikachu-beaute-queue.png" 
+                   Opacity="0" x:Name="Queue">
+        </Image>
+
+        <ScrollViewer Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="3" HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible" VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Hidden">
+            <ListView
+            x:Name="DressesListView" ItemsSource="{Binding}" 
+            VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+            AllowDrop="True" CanDrag="True" CanReorderItems="True" CanDragItems="True">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel CanDrag="False" HorizontalAlignment="Center" 
+                        Margin="10,15,10,15" Background="White" Height="70" Width="70"
+                        Tapped="On_Dress_Tapped" Tag="{Binding Name}">
+                            <Image Source="{Binding Vignette}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
     </Grid>
 </Page>
