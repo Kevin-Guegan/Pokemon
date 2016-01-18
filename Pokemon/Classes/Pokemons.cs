@@ -43,7 +43,7 @@ namespace Pokemon.Classes
         }
 
 
-        public Pokemons(int id, string name, string weight, string height, string Description, string type, string number, string health, List<Attack> attack, List<Dresses> dress, BitmapImage imgPokedex, BitmapImage imgDress, BitmapImage imgFight)
+        public Pokemons(int id, string name, string weight, string height, string description, string type, string number, string health, List<Attack> attack, List<Dresses> dress, BitmapImage imgPokedex, BitmapImage imgDress, BitmapImage imgFight)
         {
             this.Id = id;
             this.Name = name;

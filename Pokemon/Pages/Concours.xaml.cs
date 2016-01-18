@@ -28,8 +28,7 @@ namespace Pokemon.Pages
         public Concours()
         {
             this.InitializeComponent();
-
-            var pokemon = Dresses.GetDressesList();
+            DataContext = Dresses.GetDressesList();
         }
 
         private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)
@@ -40,6 +39,77 @@ namespace Pokemon.Pages
         private void On_imageNavLeft_Tapped(object sender, TappedRoutedEventArgs e)
         {
 
+        }
+
+        private void On_Dress_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            var vignette = sender as StackPanel;
+            if (vignette.Tag == "Haut")
+            {
+                if(Haut.Opacity == 1)
+                {
+                    Haut.Opacity = 0;
+                }
+                else
+                {
+                    Haut.Opacity = 1;
+                }
+            }
+            if (vignette.Tag == "Jupe")
+            {
+                if (Jupe.Opacity == 1)
+                {
+                    Jupe.Opacity = 0;
+                }
+                else
+                {
+                    Jupe.Opacity = 1;
+                }
+            }
+            if (vignette.Tag == "Noeud")
+            {
+                if (Noeud.Opacity == 1)
+                {
+                    Noeud.Opacity = 0;
+                }
+                else
+                {
+                    Noeud.Opacity = 1;
+                }
+            }
+            if (vignette.Tag == "Chaussures")
+            {
+                if (Chaussures.Opacity == 1)
+                {
+                    Chaussures.Opacity = 0;
+                }
+                else
+                {
+                    Chaussures.Opacity = 1;
+                }
+            }
+            if (vignette.Tag == "Manchettes")
+            {
+                if (Manchettes.Opacity == 1)
+                {
+                    Manchettes.Opacity = 0;
+                }
+                else
+                {
+                    Manchettes.Opacity = 1;
+                }
+            }
+            if (vignette.Tag == "Queue")
+            {
+                if (Queue.Opacity == 1)
+                {
+                    Queue.Opacity = 0;
+                }
+                else
+                {
+                    Queue.Opacity = 1;
+                }
+            }
         }
 
     }

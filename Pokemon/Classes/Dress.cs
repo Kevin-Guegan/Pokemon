@@ -13,9 +13,8 @@ namespace Dress.Classes
     {
         public string Name { get; set; }
         public BitmapImage Img { get; set; }
-        public string Margin { get; set; }
+        public BitmapImage Vignette { get; set; }
 
-        private static List<Dresses> dressesList;
         public static List<Dresses> DressesList
         {
             get;
@@ -27,42 +26,41 @@ namespace Dress.Classes
 
         }
 
-        public Dresses(string name, BitmapImage img, string margin)
+        public Dresses(string name, BitmapImage img, BitmapImage vignette)
         {
             this.Name = name;
             this.Img = img;
-            this.Margin = margin;
+            this.Vignette = vignette;
         }
 
         public static List<Dresses> GetDressesList()
         {
-            if (dressesList == null)
+            if (DressesList == null)
             {
-                var uriImage = new Uri("ms-appx:///Assets/pikachu-beaute-haut.png");
-                var image = new BitmapImage(uriImage);
-                dressesList.Add(new Dresses("Haut", image, "-52,-93,-102,-53"));
+                var list = new List<Dresses>();
 
-                uriImage = new Uri("ms-appx:///Assets/pikachu-beaute-jupe.png");
-                image = new BitmapImage(uriImage);
-                dressesList.Add(new Dresses("Jupe", image, "-3,-83,-23,-40"));
-
-                uriImage = new Uri("ms-appx:///Assets/pikachu-beaute-noeud.png");
-                image = new BitmapImage(uriImage);
-                dressesList.Add(new Dresses("Noeud", image, "-12,-56,-56,-149"));
-
-                uriImage = new Uri("ms-appx:///Assets/pikachu-beaute-chaussure.png");
-                image = new BitmapImage(uriImage);
-                dressesList.Add(new Dresses("Chaussures", image, "-12,-56,-56,-149"));
-
-                uriImage = new Uri("ms-appx:///Assets/pikachu-beaute-manchette.png");
-                image = new BitmapImage(uriImage);
-                dressesList.Add(new Dresses("Manchettes", image, "-12,-56,-56,-149"));
-           
-                uriImage = new Uri("ms-appx:///Assets/pikachu-beaute-queue.png");
-                image = new BitmapImage(uriImage);
-                dressesList.Add(new Dresses("Queue", image, "-12,-56,-56,-149"));
+                list.Add(new Dresses("Haut", 
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-haut.png")), 
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-haut2.png"))));
+                list.Add(new Dresses("Jupe",
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-jupe.png")),
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-jupe2.png"))));
+                list.Add(new Dresses("Noeud",
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-haut.png")),
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-noeud2.png"))));
+                list.Add(new Dresses("Chaussures",
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-chaussure.png")),
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-chaussure2.png"))));
+                list.Add(new Dresses("Manchettes",
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-manchette.png")),
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-manchette2.png"))));
+                list.Add(new Dresses("Queue",
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-queue.png")),
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-queue2.png"))));
+                DressesList = list;
             }
-            return dressesList;
+            
+            return DressesList;
         }
     }
 }
