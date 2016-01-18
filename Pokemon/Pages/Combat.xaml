@@ -1,5 +1,6 @@
 ﻿<Page
     x:Class="Pokemon.Pages.Combat"
+    xmlns:usersControls="using:Pokemon.UsersControls"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Pokemon.Pages"
@@ -7,7 +8,46 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <usersControls:Menu HorizontalAlignment="Right" VerticalAlignment="Top" Height="48" Opacity="5" Grid.Column="1"></usersControls:Menu>
+        <Image x:Name="Pokeball" Grid.Row="2" Grid.Column="0" Source="ms-appx:///Assets/pokeball_combat.png"  Margin="-10,99,10,10"/>
+        <Image x:Name="Pikachu" Grid.Row="1" Grid.Column="0" Source="ms-appx:///Assets/pikachu_mirroir.png" Margin="-10,190,10,98" Grid.RowSpan="2"/>
+        <Image x:Name="Pokeball_2" Grid.Row="1" Grid.Column="1" Source="ms-appx:///Assets/pokeball_combat.png"  Margin="35,101,10,10"/>
+        <Image x:Name="PokemonEnnemy" Grid.Column="1" Source="ms-appx:///Assets/carapuce.png"  Margin="57,36,-12,64" Grid.RowSpan="2"/>
+        <Image Grid.Row="3"  Grid.ColumnSpan="2"  Stretch="fill" Source="ms-appx:///Assets/blackBackground.png" Opacity="0.5"/>
+        <TextBlock x:Name="ActionTitle" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Que dois faire PIKACHU ?" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Action1" HorizontalAlignment="Left" Margin="10,35,0,0" Grid.Row="3" TextWrapping="Wrap" Text="- Eclair" VerticalAlignment="Top" Tapped="OnTapped_Action1"/>
+        <TextBlock x:Name="Action2" HorizontalAlignment="Left" Margin="10,60,0,0" Grid.Row="3" TextWrapping="Wrap" Text="- Vive-Attaque" VerticalAlignment="Top" Tapped="OnTapped_Action2"/>
+        <TextBlock x:Name="Action3" Grid.Column="1" HorizontalAlignment="Left" Margin="10,35,0,0" Grid.Row="3" TextWrapping="Wrap" Text="- Tonnerre" VerticalAlignment="Top" Tapped="OnTapped_Action3"/>
+        <TextBlock x:Name="Action4" Grid.Column="1" HorizontalAlignment="Left" Margin="10,60,0,0" Grid.Row="3" TextWrapping="Wrap" Text="- Fatal-Foudre" VerticalAlignment="Top" Tapped="OnTapped_Action4" />
+        <TextBlock x:Name="MyPokemon" Grid.Column="1" HorizontalAlignment="Left" Margin="35,132,0,0" Grid.Row="2" TextWrapping="Wrap" Text="PIKACHU" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <TextBlock x:Name="EnnemyPokemon" HorizontalAlignment="Left" Margin="25,14,0,0" Grid.Row="1" TextWrapping="Wrap" Text="CARAPUCE" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <Image x:Name="MyPokemonLife" Grid.Column="1" Source="ms-appx:///Assets/pokemonLife100_percent.png" HorizontalAlignment="Left" Height="34" Margin="35,469,0,-423" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform ScaleY="-1"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="EnnemyPokemonLife" Tag="100" Source="ms-appx:///Assets/pokemonLife100_percent.png" HorizontalAlignment="Left" Height="34" Margin="26,124,0,-78" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform ScaleY="-1"/>
+            </Image.RenderTransform>
+        </Image>
 
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/bg_combat.png" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        
+        
     </Grid>
+
 </Page>
