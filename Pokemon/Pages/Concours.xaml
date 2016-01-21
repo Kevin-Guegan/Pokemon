@@ -66,26 +66,23 @@
                    Opacity="0" x:Name="Queue">
         </Image>
 
-        <ScrollViewer Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="3" HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible" VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Hidden">
-            <ListView
-            x:Name="DressesListView" ItemsSource="{Binding}" 
-            VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-            AllowDrop="True" CanDrag="True" CanReorderItems="True" CanDragItems="True">
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Horizontal"/>
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel CanDrag="False" HorizontalAlignment="Center" 
-                        Margin="10,15,10,15" Background="White" Height="70" Width="70"
-                        Tapped="On_Dress_Tapped" Tag="{Binding Name}">
-                            <Image Source="{Binding Vignette}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </ScrollViewer>
+
+        <Pivot Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5" 
+               x:Name="DressesPivot" ItemsSource="{Binding}">
+            <Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Width="100%" HorizontalAlignment="Stretch"></StackPanel>
+                </DataTemplate>
+            </Pivot.HeaderTemplate>
+            <Pivot.ItemTemplate>
+                <DataTemplate>
+                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,15,10,15" 
+                          Background="White" Height="70" Width="70" Tapped="On_Dress_Tapped" 
+                          Tag="{Binding Name}" BorderBrush="White" BorderThickness="3">
+                        <Image Source="{Binding Vignette}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                    </Grid>
+                </DataTemplate>
+            </Pivot.ItemTemplate>
+        </Pivot>
     </Grid>
 </Page>

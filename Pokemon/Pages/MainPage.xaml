@@ -35,6 +35,19 @@
             <usersControls:HomeButton x:Name="concoursButton" Grid.Column="1" Grid.Row="3" Tapped="On_Concours_Tapped"></usersControls:HomeButton>
             <usersControls:HomeButton x:Name="promenadeButton" Grid.Column="1" Grid.Row="4" Tapped="On_Promenade_Tapped"></usersControls:HomeButton>
 
+            <TextBlock Grid.Row="1" Grid.Column="1" Margin="6,6,6,6" VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" FontFamily="Arial" 
+                   FontSize="26.667" Padding="0,0,0,15" Tapped="On_Pokedex_Tapped">Pokedex</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1" Margin="6,6,6,6" VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" FontFamily="Arial" 
+                   FontSize="26.667" Padding="0,0,0,15" Tapped="On_Combat_Tapped">Combat</TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="1" Margin="6,6,6,6" VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" FontFamily="Arial" 
+                   FontSize="26.667" Padding="0,0,0,15" Tapped="On_Concours_Tapped">Dressing</TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="1" Margin="6,6,6,6" VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" FontFamily="Arial" 
+                   FontSize="26.667" Padding="0,0,0,15" Tapped="On_Promenade_Tapped">Promenade</TextBlock>
+
             <Image x:Name="imageNavLeft" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" Height="30" 
                    VerticalAlignment="Top" Width="31" RenderTransformOrigin="0.5,0.5" Source="ms-appx:///Assets/bg_nav_left.png" 
                    Tapped="On_imageNavLeft_Tapped">
@@ -49,8 +62,21 @@
                     <CompositeTransform Rotation="1.769" TranslateX="-0.482" TranslateY="0.243"/>
                 </Image.RenderTransform>
             </Image>
-            <Image x:Name="imageList" Grid.Column="1" Grid.Row="5" Margin="0,15,0,15" 
-                   HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+
+            <Pivot Grid.Row="5" Grid.Column="1" x:Name="PokemonsPivot" ItemsSource="{Binding}">
+                <Pivot.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel Width="100%" HorizontalAlignment="Stretch"></StackPanel>
+                    </DataTemplate>
+                </Pivot.HeaderTemplate>
+                <Pivot.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,15,0,15" HorizontalAlignment="Center" VerticalAlignment="Stretch">
+                            <Image Source="{Binding ImgPokedex}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                        </Grid>
+                    </DataTemplate>
+                </Pivot.ItemTemplate>
+            </Pivot>
         </Grid>
     </Grid>
 </Page>

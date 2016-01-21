@@ -24,21 +24,21 @@ namespace Pokemon
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public int indexListe;
+        //public int indexListe;
 
         public MainPage()
         {
             this.InitializeComponent();
 
-            indexListe = 1;
-            var pokemon = Pokemons.GetPokemonById(indexListe);
-
-            imageList.Source = pokemon.ImgPokedex;
+            //indexListe = 1;
+            //var pokemon = Pokemons.GetPokemonById(indexListe);
+            //imageList.Source = pokemon.ImgPokedex;
+            DataContext = Pokemons.GetPokemonsList();
         }
 
         private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            indexListe++;
+            /*indexListe++;
             var pokemon = Pokemons.GetPokemonById(indexListe);
             if (pokemon != null)
             {
@@ -47,12 +47,12 @@ namespace Pokemon
             else
             {
                 indexListe--;
-            }
+            }*/
         }
 
         private void On_imageNavLeft_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            indexListe--;
+            /*indexListe--;
             var pokemon = Pokemons.GetPokemonById(indexListe);
             if (pokemon != null)
             {
@@ -61,7 +61,7 @@ namespace Pokemon
             else
             {
                 indexListe++;
-            }
+            }*/
         }
 
         private void On_Pokedex_Tapped(object sender, TappedRoutedEventArgs e)

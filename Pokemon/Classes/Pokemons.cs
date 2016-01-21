@@ -98,5 +98,41 @@ namespace Pokemon.Classes
 
             return pokemon;
         }
+
+        public static List<Pokemons> PokemonsList
+        {
+            get;
+            set;
+        }
+
+        public static List<Pokemons> GetPokemonsList()
+        {
+            if (PokemonsList == null)
+            {
+                var list = new List<Pokemons>();
+
+                var attacks = new List<Attack>();
+                var dresses = new List<Dresses>();
+
+                list.Add(new Pokemons(1, "Pikachu", "6.0 kg", "0.4 m", "Sa queue est dressée quand il est aux aguets",
+                    "Foudre", "#025", "10", attacks, dresses,
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu.png")),
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu.png")),
+                    new BitmapImage(new Uri("ms-appx:///Assets/pikachu.png"))));
+                list.Add(new Pokemons(2, "Carapuce", "9.0 kg", "0.5 m", "Il se réfugie dans sa carapace et réplique en éclaboussant l'ennemi à la première occasion.",
+                    "Eau", "#007", "10", attacks, dresses,
+                    new BitmapImage(new Uri("ms-appx:///Assets/carapuce.png")),
+                    new BitmapImage(new Uri("ms-appx:///Assets/carapuce.png")),
+                    new BitmapImage(new Uri("ms-appx:///Assets/carapuce.png"))));
+                list.Add(new Pokemons(3, "Salamèche", "8.5 kg", "0.6m", "La flamme de sa queue symbolise sa vitalité.Elle est intense quand il est en bonne santé.",
+                    "Feu", "#004", "10", attacks, dresses,
+                    new BitmapImage(new Uri("ms-appx:///Assets/salameche.png")),
+                    new BitmapImage(new Uri("ms-appx:///Assets/salameche.png")),
+                    new BitmapImage(new Uri("ms-appx:///Assets/salameche.png"))));
+                PokemonsList = list;
+            }
+
+            return PokemonsList;
+        }
     }
 }

@@ -33,12 +33,12 @@ namespace Pokemon.Pages
 
         private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)
         {
-
+            //DressesListView.ScrollIntoView(DressesListView.Items[2]);
         }
 
         private void On_imageNavLeft_Tapped(object sender, TappedRoutedEventArgs e)
         {
-
+            //DressesListView.ScrollIntoView(DressesListView.Items[0]);
         }
 
         private void On_Dress_Tapped(object sender, TappedRoutedEventArgs e)
