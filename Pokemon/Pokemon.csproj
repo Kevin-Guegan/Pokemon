@@ -165,6 +165,7 @@
     <Content Include="Assets\pikachu-beaute-queue2.png" />
     <Content Include="Assets\Pikachu.png" />
     <Content Include="Assets\pikachu_mirroir.png" />
+    <Content Include="Assets\pokeball_combat.png" />
     <Content Include="Assets\pokemonLife0_percent.png" />
     <Content Include="Assets\pokemonLife100_percent.png" />
     <Content Include="Assets\pokemonLife25_percent.png" />

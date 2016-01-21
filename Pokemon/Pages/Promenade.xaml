@@ -18,7 +18,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <usersControls:Menu HorizontalAlignment="Right" VerticalAlignment="Top" Height="48" Opacity="5"></usersControls:Menu>
+        <usersControls:Menu HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Width="175" Opacity="5"></usersControls:Menu>
         <Image x:Name="Player" Grid.Column="1" Grid.Row="1" Source="ms-appx:///Assets/SachaBot.png" Height="50"/>
         <Image x:Name="NavTop" Grid.Column="1" Grid.Row="1" Source="ms-appx:///Assets/bg_nav_top.png" Height="50" Margin="0,430,0,0" Tapped="NavTopOnTapped"/>
         <Image x:Name="NavLeft" Grid.Column="1" Grid.Row="1" Source="ms-appx:///Assets/bg_nav_left.png" Height="50" Margin="0,500,150,0" Tapped="NavLeftOnTapped"/>
