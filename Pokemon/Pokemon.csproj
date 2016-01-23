@@ -135,6 +135,7 @@
     <None Include="Pokemon_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\appareil_photo.png" />
     <Content Include="Assets\bg_combat.png" />
     <Content Include="Assets\bg_concours_motif.jpg" />
     <Content Include="Assets\bg_nav_bot.png" />

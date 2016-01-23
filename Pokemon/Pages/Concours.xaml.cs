@@ -41,6 +41,11 @@ namespace Pokemon.Pages
             //DressesListView.ScrollIntoView(DressesListView.Items[0]);
         }
 
+        private void OkButton_Click(object sender, RoutedEventArgs e)
+        {
+            PhotoSave.Flyout.Hide();
+        }
+
         private void On_Dress_Tapped(object sender, TappedRoutedEventArgs e)
         {
             var vignette = sender as StackPanel;
@@ -49,6 +54,7 @@ namespace Pokemon.Pages
                 if(Haut.Opacity == 1)
                 {
                     Haut.Opacity = 0;
+                    //vignette.BorderBrush=Brushes.Black;
                 }
                 else
                 {

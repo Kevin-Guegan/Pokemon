@@ -24,23 +24,43 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="50"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="50"/>
         </Grid.ColumnDefinitions>
 
-
-        <usersControls:Menu HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Width="175"
+        <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="2" x:Name="PhotoSave" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Image  Height="70" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0"
+                           Source="ms-appx:///Assets/appareil_photo.png"></Image>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Flyout>
+                <Flyout Placement="Left">
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Center" Text="Photo enregistrée" FontSize="16"
+                           FontFamily="Arial" Margin="0,5,0,0"/>
+                        <Button Content="OK" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        FontFamily="Arial" FontSize="16" Margin="0,20,0,0" Click="OkButton_Click" />
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
+        
+        <usersControls:Menu HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Width="185"
             Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="6" Grid.RowSpan="5"></usersControls:Menu>
         
         <Grid Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5" Background="Black" Opacity="0.5"></Grid>
-        
-        <Image Grid.Row="6" Grid.Column="1" x:Name="imageNavLeft" Height="30" Width="31" HorizontalAlignment="Right"
+
+        <Image Grid.Row="6" Grid.Column="1" x:Name="imageNavLeft" Height="30" Width="31" HorizontalAlignment="Right" Margin="0,0,10,0"
                    Source="ms-appx:///Assets/bg_nav_left.png" Tapped="On_imageNavLeft_Tapped">
         </Image>
-        <Image Grid.Row="6" Grid.Column="5" x:Name="imageNavRight" Height="30" Width="31" HorizontalAlignment="Left"
+        <Image Grid.Row="6" Grid.Column="5" x:Name="imageNavRight" Height="30" Width="31" HorizontalAlignment="Left" Margin="10,0,0,0"
                    Source="ms-appx:///Assets/bg_nav_right.png" Tapped="On_imageNavRight_Tapped">
         </Image>
 
@@ -67,22 +87,27 @@
         </Image>
 
 
-        <Pivot Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5" 
-               x:Name="DressesPivot" ItemsSource="{Binding}">
-            <Pivot.HeaderTemplate>
-                <DataTemplate>
-                    <StackPanel Width="100%" HorizontalAlignment="Stretch"></StackPanel>
-                </DataTemplate>
-            </Pivot.HeaderTemplate>
-            <Pivot.ItemTemplate>
-                <DataTemplate>
-                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,15,10,15" 
-                          Background="White" Height="70" Width="70" Tapped="On_Dress_Tapped" 
-                          Tag="{Binding Name}" BorderBrush="White" BorderThickness="3">
-                        <Image Source="{Binding Vignette}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-                    </Grid>
-                </DataTemplate>
-            </Pivot.ItemTemplate>
-        </Pivot>
+        <ScrollViewer Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="3" HorizontalScrollMode="Enabled" 
+            HorizontalScrollBarVisibility="Visible" VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Hidden">
+            <ListView
+            x:Name="DressesListView" ItemsSource="{Binding}" 
+            VerticalAlignment="Stretch" HorizontalAlignment="Center"
+            AllowDrop="True" CanDrag="True" CanReorderItems="True" CanDragItems="True">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel CanDrag="False" HorizontalAlignment="Center" 
+                        Margin="10,15,10,15" Background="White" Height="70" Width="70"
+                        Tapped="On_Dress_Tapped" Tag="{Binding Name}" BorderBrush="Tomato" BorderThickness="3">
+                            <Image Source="{Binding Vignette}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
     </Grid>
 </Page>
