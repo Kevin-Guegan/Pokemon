@@ -74,5 +74,7 @@ namespace Pokemon.Pages
             margin.Bottom = margin.Bottom + 10;
             Player.Margin = margin;
         }
+
+
     }
 }
