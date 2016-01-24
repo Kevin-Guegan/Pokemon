@@ -47,19 +47,19 @@
         <TextBlock x:Name="Action4" HorizontalAlignment="Left" Margin="30,65,0,0" Grid.Row="4" Grid.Column="2" FontFamily="Arial" 
                    TextWrapping="Wrap" Text="- Fatal-Foudre" VerticalAlignment="Top" Tapped="OnTapped_Action4" Foreground="White"/>
         
-        <TextBlock x:Name="MyPokemon" HorizontalAlignment="Left" Margin="35,132,0,0" Grid.Row="3" Grid.Column="2" FontFamily="Arial" 
-                   TextWrapping="Wrap" Text="PIKACHU" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
-        <TextBlock x:Name="EnnemyPokemon" HorizontalAlignment="Left" Margin="25,14,0,0" Grid.Row="2" Grid.Column="1" FontFamily="Arial" 
+        <TextBlock x:Name="MyPokemon" HorizontalAlignment="Left" Margin="35,0,0,65" Grid.Row="3" Grid.Column="2" FontFamily="Arial" 
+                   TextWrapping="Wrap" Text="PIKACHU" VerticalAlignment="Bottom" Foreground="White" FontSize="18"/>
+        <TextBlock x:Name="EnnemyPokemon" HorizontalAlignment="Left" Margin="35,14,0,0" Grid.Row="2" Grid.Column="1" FontFamily="Arial" 
                    TextWrapping="Wrap" Text="CARAPUCE" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
         
-        <Image x:Name="MyPokemonLife" Grid.Column="2" Grid.Row="3" Source="ms-appx:///Assets/pokemonLife100_percent.png" HorizontalAlignment="Left" Height="34" 
-               Margin="35,160,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="MyPokemonLife" Grid.Column="2" Grid.Row="3" Source="ms-appx:///Assets/pokemonLife100_percent.png" HorizontalAlignment="Left" Height="34"
+               Margin="35,0,0,50" VerticalAlignment="Bottom" Width="120" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <CompositeTransform ScaleY="-1"/>
             </Image.RenderTransform>
         </Image>
         <Image x:Name="EnnemyPokemonLife" Tag="100" Source="ms-appx:///Assets/pokemonLife100_percent.png" HorizontalAlignment="Left" Height="34" 
-               Margin="26,45,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="2">
+               Margin="35,45,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="2">
             <Image.RenderTransform>
                 <CompositeTransform ScaleY="-1"/>
             </Image.RenderTransform>

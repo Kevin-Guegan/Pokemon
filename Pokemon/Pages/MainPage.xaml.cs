@@ -83,5 +83,10 @@ namespace Pokemon
         {
             (Window.Current.Content as Frame).Navigate(typeof(Promenade));
         }
+
+        private void ExitButtonOnTapped(object sender, TappedRoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
     }
 }

@@ -137,6 +137,7 @@
   <ItemGroup>
     <Content Include="Assets\appareil_photo.png" />
     <Content Include="Assets\bg_combat.png" />
+    <Content Include="Assets\bg_combat_motif.jpg" />
     <Content Include="Assets\bg_concours_motif.jpg" />
     <Content Include="Assets\bg_nav_bot.png" />
     <Content Include="Assets\bg_nav_exit.png" />
@@ -146,8 +147,10 @@
     <Content Include="Assets\bg_nav_save.png" />
     <Content Include="Assets\bg_nav_top.png" />
     <Content Include="Assets\bg_pokeball.png" />
+    <Content Include="Assets\bg_promenade_motif.jpg" />
     <Content Include="Assets\blackBackground.png" />
     <Content Include="Assets\carapuce.png" />
+    <Content Include="Assets\carapuce_combat.png" />
     <Content Include="Assets\Logo-Pokemon.jpg" />
     <Content Include="Assets\logo.png" />
     <Content Include="Assets\pikachu-beaute-chaussure.png" />
@@ -165,6 +168,7 @@
     <Content Include="Assets\map.png" />
     <Content Include="Assets\pikachu-beaute-queue2.png" />
     <Content Include="Assets\Pikachu.png" />
+    <Content Include="Assets\pikachu_combat.png" />
     <Content Include="Assets\pikachu_mirroir.png" />
     <Content Include="Assets\pokeball_combat.png" />
     <Content Include="Assets\pokemonLife0_percent.png" />

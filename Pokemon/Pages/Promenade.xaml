@@ -10,7 +10,11 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="ms-appx:///Assets/map.png" Stretch="None" />
+            <ImageBrush ImageSource="ms-appx:///Assets/bg_promenade_motif.jpg" Stretch="None" >
+                <ImageBrush.Transform>
+                    <CompositeTransform TranslateX="94"/>
+                </ImageBrush.Transform>
+            </ImageBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>

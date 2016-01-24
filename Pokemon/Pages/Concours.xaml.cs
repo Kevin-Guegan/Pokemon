@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -54,11 +55,13 @@ namespace Pokemon.Pages
                 if(Haut.Opacity == 1)
                 {
                     Haut.Opacity = 0;
-                    //vignette.BorderBrush=Brushes.Black;
+                    vignette.BorderBrush = new SolidColorBrush(Colors.White);
+
                 }
                 else
                 {
                     Haut.Opacity = 1;
+                    vignette.BorderBrush = new SolidColorBrush(Colors.DeepPink);
                 }
             }
             if (vignette.Tag == "Jupe")
@@ -66,10 +69,12 @@ namespace Pokemon.Pages
                 if (Jupe.Opacity == 1)
                 {
                     Jupe.Opacity = 0;
+                    vignette.BorderBrush = new SolidColorBrush(Colors.White);
                 }
                 else
                 {
                     Jupe.Opacity = 1;
+                    vignette.BorderBrush = new SolidColorBrush(Colors.DeepPink);
                 }
             }
             if (vignette.Tag == "Noeud")
@@ -77,10 +82,12 @@ namespace Pokemon.Pages
                 if (Noeud.Opacity == 1)
                 {
                     Noeud.Opacity = 0;
+                    vignette.BorderBrush = new SolidColorBrush(Colors.White);
                 }
                 else
                 {
                     Noeud.Opacity = 1;
+                    vignette.BorderBrush = new SolidColorBrush(Colors.DeepPink);
                 }
             }
             if (vignette.Tag == "Chaussures")
@@ -88,10 +95,12 @@ namespace Pokemon.Pages
                 if (Chaussures.Opacity == 1)
                 {
                     Chaussures.Opacity = 0;
+                    vignette.BorderBrush = new SolidColorBrush(Colors.White);
                 }
                 else
                 {
                     Chaussures.Opacity = 1;
+                    vignette.BorderBrush = new SolidColorBrush(Colors.DeepPink);
                 }
             }
             if (vignette.Tag == "Manchettes")
@@ -99,10 +108,12 @@ namespace Pokemon.Pages
                 if (Manchettes.Opacity == 1)
                 {
                     Manchettes.Opacity = 0;
+                    vignette.BorderBrush = new SolidColorBrush(Colors.White);
                 }
                 else
                 {
                     Manchettes.Opacity = 1;
+                    vignette.BorderBrush = new SolidColorBrush(Colors.DeepPink);
                 }
             }
             if (vignette.Tag == "Queue")
@@ -110,10 +121,12 @@ namespace Pokemon.Pages
                 if (Queue.Opacity == 1)
                 {
                     Queue.Opacity = 0;
+                    vignette.BorderBrush = new SolidColorBrush(Colors.White);
                 }
                 else
                 {
                     Queue.Opacity = 1;
+                    vignette.BorderBrush = new SolidColorBrush(Colors.DeepPink);
                 }
             }
         }
