@@ -16,12 +16,12 @@
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="0*"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="45"/>
+                <RowDefinition Height="85"/>
                 <RowDefinition Height="150"/>
-                <RowDefinition Height="45"/>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="30*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1*"/>
                 <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -32,40 +32,51 @@
                 <ColumnDefinition Width="30"/>
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.Row="3" Grid.Column="2" Grid.RowSpan="4" Grid.ColumnSpan="2" Background="Black" Opacity="0.5" CornerRadius="5,5,5,5"></Grid>
+            <Grid Grid.Row="2" Grid.Column="2" Grid.RowSpan="5" Grid.ColumnSpan="2" Background="Black" Opacity="0.5" CornerRadius="5,5,5,5"></Grid>
 
             <usersControls:Menu HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Width="185"
-                Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="7"></usersControls:Menu>
+                Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="6"></usersControls:Menu>
 
-            <Image x:Name="image" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Left" Height="130" Margin="20,20,0,0"
+            <Image x:Name="image" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Height="130" Margin="20,20,0,0"
                    VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.607,-0.776" Source="ms-appx:///Assets/Pikachu.png"/>
-            <TextBlock x:Name="NamePokemon" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Left" Margin="0,20,0,0" FontFamily="Arial"
+            
+            <TextBlock x:Name="NamePokemon" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" Margin="0,20,0,0" FontFamily="Arial"
                        TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" FontWeight="Bold" Foreground="White" />
-            <TextBlock x:Name="NumberPokemon" Grid.Column="3" HorizontalAlignment="Left" Margin="0,50,0,0" TextWrapping="Wrap" FontFamily="Arial"
-                       VerticalAlignment="Top" Width="81" RenderTransformOrigin="0.514,-0.188" Height="21" Foreground="White"/>
-            <TextBlock x:Name="Height" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Left" Margin="0,82,0,0" TextWrapping="Wrap" 
+            <TextBlock x:Name="NumberPokemon" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" Margin="0,70,0,0" TextWrapping="Wrap" FontFamily="Arial"
+                       VerticalAlignment="Top" Width="81" Height="21" Foreground="White"/>
+            <TextBlock x:Name="Height" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" Margin="0,90,0,0" TextWrapping="Wrap" 
                        Text="Taille :" VerticalAlignment="Top" Width="43" Foreground="White" FontFamily="Arial"/>
-            <TextBlock x:Name="Weight" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Left" Margin="0,114,0,0" TextWrapping="Wrap" 
+            <TextBlock x:Name="Weight" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" Margin="0,110,0,0" TextWrapping="Wrap" 
                        Text="Poids :" VerticalAlignment="Top" Foreground="White" FontFamily="Arial"/>
-            <TextBlock x:Name="HeightValue" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Left" Margin="64,82,0,0" 
-                       TextWrapping="Wrap" VerticalAlignment="Top" Width="47" Height="32" RenderTransformOrigin="0.479,0.542" 
-                       Foreground="White" FontFamily="Arial"/>
-            <TextBlock x:Name="WeightValue" Grid.Column="3" HorizontalAlignment="Left" Margin="64,114,0,0" Grid.Row="2" 
+            <TextBlock x:Name="HeightValue" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" Margin="64,90,0,0" 
+                       TextWrapping="Wrap" VerticalAlignment="Top" Width="47" Height="32" Foreground="White" FontFamily="Arial"/>
+            <TextBlock x:Name="WeightValue" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" Margin="64,110,0,0"
                        TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontFamily="Arial"/>
-            <TextBlock x:Name="DescriptionPokemon" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Left" Margin="10,10,0,0" 
-                       TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontFamily="Arial"/>
-            <TextBlock x:Name="Type" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" 
-                       Text="Type :" VerticalAlignment="Top" Foreground="White" FontFamily="Arial"/>
-            <TextBlock x:Name="TypePokemon" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="5" HorizontalAlignment="Left" Margin="53,10,0,0" TextWrapping="Wrap" 
-                       VerticalAlignment="Top" Width="127" Foreground="White" FontFamily="Arial"/>
-            <TextBlock x:Name="Attaque" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" 
-                       Text="Attaques :" VerticalAlignment="Top" Foreground="White" FontFamily="Arial"/>
 
-            <Image Grid.Row="4" Grid.Column="1" x:Name="imageNavLeft" Height="40" Width="40" 
+            <TextBlock x:Name="DescriptionPokemon" Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="30,10,30,0" 
+                       TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontFamily="Arial"/>
+            
+            <TextBlock x:Name="Type" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="30,10,0,0" TextWrapping="Wrap" 
+                       Text="Type :" VerticalAlignment="Top" Foreground="White" FontFamily="Arial"/>
+            <TextBlock x:Name="TypePokemon" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="5" HorizontalAlignment="Left" Margin="73,10,0,0" TextWrapping="Wrap" 
+                       VerticalAlignment="Top" Foreground="White" FontFamily="Arial"/>
+            
+            <TextBlock x:Name="Attaque" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="30,10,0,0" TextWrapping="Wrap" 
+                       Text="Attaques :" VerticalAlignment="Top" Foreground="White" FontFamily="Arial"/>
+            <TextBlock x:Name="Attaque1" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="30,30,0,0" TextWrapping="Wrap" 
+                       VerticalAlignment="Top" Foreground="White" FontFamily="Arial"/>
+            <TextBlock x:Name="Attaque2" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="30,50,0,0" TextWrapping="Wrap" 
+                       VerticalAlignment="Top" Foreground="White" FontFamily="Arial"/>
+            <TextBlock x:Name="Attaque3" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="30,70,0,0" TextWrapping="Wrap" 
+                       VerticalAlignment="Top" Foreground="White" FontFamily="Arial"/>
+            <TextBlock x:Name="Attaque4" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="30,90,0,0" TextWrapping="Wrap" 
+                       VerticalAlignment="Top" Foreground="White" FontFamily="Arial"/>
+
+            <Image Grid.Row="3" Grid.Column="1" x:Name="imageNavLeft" Height="40" Width="40" 
                    HorizontalAlignment="Right" Margin="0,0,-20,0"
                        Source="ms-appx:///Assets/bg_nav_left.png" Tapped="On_imageNavLeft_Tapped">
             </Image>
-            <Image Grid.Row="4" Grid.Column="4" x:Name="imageNavRight" Height="40" Width="40" 
+            <Image Grid.Row="3" Grid.Column="4" x:Name="imageNavRight" Height="40" Width="40" 
                    HorizontalAlignment="Left" Margin="-20,0,0,0"
                        Source="ms-appx:///Assets/bg_nav_right.png" Tapped="On_imageNavRight_Tapped">
             </Image>

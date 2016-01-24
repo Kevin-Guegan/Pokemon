@@ -102,7 +102,7 @@
                     <DataTemplate>
                         <StackPanel CanDrag="False" HorizontalAlignment="Center" 
                         Margin="10,15,10,15" Background="White" Height="70" Width="70"
-                        Tapped="On_Dress_Tapped" Tag="{Binding Name}" BorderBrush="Tomato" BorderThickness="3">
+                        Tapped="On_Dress_Tapped" Tag="{Binding Name}" BorderBrush="White" BorderThickness="3">
                             <Image Source="{Binding Vignette}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
                         </StackPanel>
                     </DataTemplate>

@@ -28,6 +28,11 @@ namespace Pokemon.Pages
             this.InitializeComponent();
         }
 
+        private void RetourButton_Click(object sender, RoutedEventArgs e)
+        {
+            (Window.Current.Content as Frame).Navigate(typeof(MainPage));
+        }
+
         private void OnTapped_Action1(object sender, TappedRoutedEventArgs e)
         {
             ImageSource ActualImage = EnnemyPokemonLife.Source;
@@ -58,6 +63,8 @@ namespace Pokemon.Pages
                 EnnemyPokemonLife.Tag = "0";
                 uriImage = new Uri("ms-appx:///Assets/pokemonLife0_percent.png");
                 image = new BitmapImage(uriImage);
+
+                WinFlyout.Opacity = 1;
             }
 
             EnnemyPokemonLife.Source = image;
@@ -94,6 +101,8 @@ namespace Pokemon.Pages
                 EnnemyPokemonLife.Tag = "0";
                 uriImage = new Uri("ms-appx:///Assets/pokemonLife0_percent.png");
                 image = new BitmapImage(uriImage);
+
+                WinFlyout.Opacity = 1;
             }
 
             EnnemyPokemonLife.Source = image;
@@ -130,6 +139,8 @@ namespace Pokemon.Pages
                 EnnemyPokemonLife.Tag = "0";
                 uriImage = new Uri("ms-appx:///Assets/pokemonLife0_percent.png");
                 image = new BitmapImage(uriImage);
+
+                WinFlyout.Opacity = 1;
             }
 
             EnnemyPokemonLife.Source = image;
@@ -166,6 +177,8 @@ namespace Pokemon.Pages
                 EnnemyPokemonLife.Tag = "0";
                 uriImage = new Uri("ms-appx:///Assets/pokemonLife0_percent.png");
                 image = new BitmapImage(uriImage);
+
+                WinFlyout.Opacity = 1;
             }
 
             EnnemyPokemonLife.Source = image;
