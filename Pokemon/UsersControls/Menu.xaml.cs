@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Pokemon.Pages;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,6 +24,12 @@ namespace Pokemon.UsersControls
         public Menu()
         {
             this.InitializeComponent();
+
+            /*var page = (Window.Current.Content as Frame).Content as Promenade;
+            if (page != null)
+            {
+                BackgroundMenu.Background = new SolidColorBrush(Colors.White);
+            }*/
         }
 
         private void Home_On_Tapped(object sender, TappedRoutedEventArgs e)
@@ -37,6 +45,11 @@ namespace Pokemon.UsersControls
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
             buttonSave.Flyout.Hide();
+        }
+
+        private void ExitButtonOnTapped(object sender, TappedRoutedEventArgs e)
+        {
+            Application.Current.Exit();
         }
     }
 }

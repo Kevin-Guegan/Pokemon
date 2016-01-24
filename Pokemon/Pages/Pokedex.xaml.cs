@@ -42,6 +42,10 @@ namespace Pokemon.Pages
             WeightValue.Text = pokemon.Weight;
             DescriptionPokemon.Text = pokemon.Description;
             TypePokemon.Text = pokemon.Type;
+            Attaque1.Text = "- " + pokemon.Attaque1;
+            Attaque2.Text = "- " + pokemon.Attaque2;
+            Attaque3.Text = "- " + pokemon.Attaque3;
+            Attaque4.Text = "- " + pokemon.Attaque4;
         }
 
         private void On_imageNavLeft_Tapped(object sender, TappedRoutedEventArgs e)
@@ -57,7 +61,10 @@ namespace Pokemon.Pages
                 WeightValue.Text = pokemon.Weight;
                 DescriptionPokemon.Text = pokemon.Description;
                 TypePokemon.Text = pokemon.Type;
-
+                Attaque1.Text = "- " + pokemon.Attaque1;
+                Attaque2.Text = "- " + pokemon.Attaque2;
+                Attaque3.Text = "- " + pokemon.Attaque3;
+                Attaque4.Text = "- " + pokemon.Attaque4;
             }
             else
             {
@@ -78,6 +85,10 @@ namespace Pokemon.Pages
                 WeightValue.Text = pokemon.Weight;
                 DescriptionPokemon.Text = pokemon.Description;
                 TypePokemon.Text = pokemon.Type;
+                Attaque1.Text = "- " + pokemon.Attaque1;
+                Attaque2.Text = "- " + pokemon.Attaque2;
+                Attaque3.Text = "- " + pokemon.Attaque3;
+                Attaque4.Text = "- " + pokemon.Attaque4;
             }
             else
             {

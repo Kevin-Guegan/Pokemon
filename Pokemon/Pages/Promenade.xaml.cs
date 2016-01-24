@@ -34,6 +34,10 @@ namespace Pokemon.Pages
             var image = new BitmapImage(uriImage);
 
             Player.Source = image;
+
+            Thickness margin = Player.Margin;
+            margin.Top = margin.Top + 10;
+            Player.Margin = margin;
         }
 
         private void NavRightOnTapped(object sender, TappedRoutedEventArgs e)
@@ -42,6 +46,9 @@ namespace Pokemon.Pages
             var image = new BitmapImage(uriImage);
 
             Player.Source = image;
+            Thickness margin = Player.Margin;
+            margin.Left = margin.Left + 10;
+            Player.Margin = margin;
         }
 
         private void NavLeftOnTapped(object sender, TappedRoutedEventArgs e)
@@ -50,6 +57,10 @@ namespace Pokemon.Pages
             var image = new BitmapImage(uriImage);
 
             Player.Source = image;
+
+            Thickness margin = Player.Margin;
+            margin.Right = margin.Right + 10;
+            Player.Margin = margin;
         }
 
         private void NavTopOnTapped(object sender, TappedRoutedEventArgs e)
@@ -58,6 +69,12 @@ namespace Pokemon.Pages
             var image = new BitmapImage(uriImage);
 
             Player.Source = image;
+
+            Thickness margin = Player.Margin;
+            margin.Bottom = margin.Bottom + 10;
+            Player.Margin = margin;
         }
+
+
     }
 }

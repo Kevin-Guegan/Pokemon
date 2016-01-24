@@ -32,8 +32,8 @@ namespace Pokemon
 
             indexListe = 1;
             var pokemon = Pokemons.GetPokemonById(indexListe);
-
             imageList.Source = pokemon.ImgPokedex;
+            //DataContext = Pokemons.GetPokemonsList();
         }
 
         private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)
@@ -82,6 +82,11 @@ namespace Pokemon
         private void On_Promenade_Tapped(object sender, TappedRoutedEventArgs e)
         {
             (Window.Current.Content as Frame).Navigate(typeof(Promenade));
+        }
+
+        private void ExitButtonOnTapped(object sender, TappedRoutedEventArgs e)
+        {
+            Application.Current.Exit();
         }
     }
 }
