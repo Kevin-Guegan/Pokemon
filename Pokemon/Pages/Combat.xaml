@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid>
-        <usersControls:Menu HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Width="175" Opacity="5" Grid.Column="1"></usersControls:Menu>
+        <usersControls:Menu HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Width="185" Opacity="5" Grid.Column="1"></usersControls:Menu>
         <Image x:Name="Pokeball" Grid.Row="2" Grid.Column="0" Source="ms-appx:///Assets/pokeball_combat.png"  Margin="-10,99,10,10"/>
         <Image x:Name="Pikachu" Grid.Row="1" Grid.Column="0" Source="ms-appx:///Assets/pikachu_mirroir.png" Margin="-10,190,10,98" Grid.RowSpan="2"/>
         <Image x:Name="Pokeball_2" Grid.Row="1" Grid.Column="1" Source="ms-appx:///Assets/pokeball_combat.png"  Margin="35,101,10,10"/>
