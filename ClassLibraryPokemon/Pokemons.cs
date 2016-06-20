@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
 
-namespace Pokemon.Classes
+namespace ClassLibraryPokemon
 {
-    class Pokemons
+    public class Pokemons : EntityBase
     {
         public int Id { get; set; }
 

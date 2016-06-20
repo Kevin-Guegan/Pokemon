@@ -34,7 +34,7 @@ namespace Pokemon.UsersControls
 
         private void Home_On_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            (Window.Current.Content as Frame).Navigate(typeof(MainPage));
+            (Window.Current.Content as Frame).Navigate(typeof(MainPageView));
         }
 
         private void Save_On_Tapped(object sender, TappedRoutedEventArgs e)

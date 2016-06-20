@@ -16,21 +16,21 @@ using Windows.UI.Xaml.Navigation;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, voir la page http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Pokemon.Pages
+namespace Pokemon.Views
 {
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class Combat : Page
+    public sealed partial class CombatView : Page
     {
-        public Combat()
+        public CombatView()
         {
             this.InitializeComponent();
         }
 
         private void RetourButton_Click(object sender, RoutedEventArgs e)
         {
-            (Window.Current.Content as Frame).Navigate(typeof(MainPage));
+            (Window.Current.Content as Frame).Navigate(typeof(Pokemon.MainPageView));
         }
 
         private void OnTapped_Action1(object sender, TappedRoutedEventArgs e)

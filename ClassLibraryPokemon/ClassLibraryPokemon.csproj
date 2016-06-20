@@ -107,7 +107,10 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="base\Entity.cs" />
+    <Compile Include="Attack.cs" />
+    <Compile Include="base\EntityBase.cs" />
+    <Compile Include="Dress.cs" />
+    <Compile Include="Pokemons.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\ClassLibraryPokemon.rd.xml" />
   </ItemGroup>

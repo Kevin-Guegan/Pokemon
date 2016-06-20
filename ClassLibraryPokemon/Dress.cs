@@ -7,9 +7,9 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
 
 
-namespace Dress.Classes
+namespace ClassLibraryPokemon
 {
-    class Dresses
+    public class Dresses : EntityBase
     {
         public string Name { get; set; }
         public BitmapImage Img { get; set; }
