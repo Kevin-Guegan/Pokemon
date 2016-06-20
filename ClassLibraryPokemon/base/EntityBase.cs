@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryPokemon
 {
-    public class Entity : INotifyPropertyChanged
+    public class EntityBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -101,31 +101,32 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Attack.cs" />
-    <Compile Include="Classes\Dress.cs" />
-    <Compile Include="Classes\Pokemons.cs" />
-    <Compile Include="Pages\Combat.xaml.cs">
-      <DependentUpon>Combat.xaml</DependentUpon>
+    <Compile Include="ViewModels\CombatViewModel.cs" />
+    <Compile Include="ViewModels\ConcoursViewModel.cs" />
+    <Compile Include="ViewModels\PokedexViewModel.cs" />
+    <Compile Include="ViewModels\PromenadeViewModel.cs" />
+    <Compile Include="Views\CombatView.xaml.cs">
+      <DependentUpon>CombatView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Concours.xaml.cs">
-      <DependentUpon>Concours.xaml</DependentUpon>
+    <Compile Include="Views\ConcoursView.xaml.cs">
+      <DependentUpon>ConcoursView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MainControls.cs" />
-    <Compile Include="Pages\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Pokedex.xaml.cs">
-      <DependentUpon>Pokedex.xaml</DependentUpon>
+    <Compile Include="Views\PokedexView.xaml.cs">
+      <DependentUpon>PokedexView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Promenade.xaml.cs">
-      <DependentUpon>Promenade.xaml</DependentUpon>
+    <Compile Include="Views\PromenadeView.xaml.cs">
+      <DependentUpon>PromenadeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\Base\BaseUserControl.cs" />
-    <Compile Include="UsersControls\HomeButton.xaml.cs">
+    <Compile Include="UserControls\HomeButton.xaml.cs">
       <DependentUpon>HomeButton.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UsersControls\Menu.xaml.cs">
+    <Compile Include="UserControls\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -196,38 +197,40 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Pages\Combat.xaml">
+    <Page Include="Views\CombatView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Concours.xaml">
+    <Page Include="Views\ConcoursView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\MainPage.xaml">
+    <Page Include="Views\MainView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Pages\Pokedex.xaml">
+    <Page Include="Views\PokedexView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Promenade.xaml">
+    <Page Include="Views\PromenadeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UsersControls\HomeButton.xaml">
+    <Page Include="UserControls\HomeButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UsersControls\Menu.xaml">
+    <Page Include="UserControls\Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
+    <ProjectReference Include="..\ClassLibraryPokemon\ClassLibraryPokemon.csproj">
+      <Project>{6647f804-bb69-4b35-aa69-2deefa98989e}</Project>
+      <Name>ClassLibraryPokemon</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

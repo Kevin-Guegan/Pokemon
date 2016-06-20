@@ -1,5 +1,5 @@
-﻿using Pokemon.Classes;
-using Pokemon.Pages;
+﻿using ClassLibraryPokemon;
+using Pokemon.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,16 +17,16 @@ using Windows.UI.Xaml.Navigation;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace Pokemon
+namespace Pokemon.Views
 {
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class MainView : Page
     {
         public int indexListe;
 
-        public MainPage()
+        public MainView()
         {
             this.InitializeComponent();
 
@@ -66,12 +66,12 @@ namespace Pokemon
 
         private void On_Pokedex_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            (Window.Current.Content as Frame).Navigate(typeof(Pokedex));
+            (Window.Current.Content as Frame).Navigate(typeof(PokedexView));
         }
 
         private void On_Combat_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            (Window.Current.Content as Frame).Navigate(typeof(Combat));
+            (Window.Current.Content as Frame).Navigate(typeof(CombatView));
         }
 
         private void On_Concours_Tapped(object sender, TappedRoutedEventArgs e)
@@ -81,7 +81,7 @@ namespace Pokemon
 
         private void On_Promenade_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            (Window.Current.Content as Frame).Navigate(typeof(Promenade));
+            (Window.Current.Content as Frame).Navigate(typeof(PromenadeView));
         }
 
         private void ExitButtonOnTapped(object sender, TappedRoutedEventArgs e)

@@ -13,22 +13,22 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Pokemon.Classes;
+using Pokemon.ViewsModels;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, voir la page http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Pokemon.Pages
+namespace Pokemon.Views
 {
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class Pokedex : Page
+    public sealed partial class PokedexView : Page
     {
         public int indexListe;
         /// <summary>
         /// 
         /// </summary>
-        public Pokedex()
+        public PokedexView()
         {
             this.InitializeComponent();
 
