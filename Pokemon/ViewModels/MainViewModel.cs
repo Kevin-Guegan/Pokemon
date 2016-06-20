@@ -13,5 +13,15 @@ namespace Pokemon.ViewModels
             set { mainView = value; }
         }
 
+        public MainViewModel(MainView mainView)
+        {
+            this.MainView = this.mainView;
+            this.Init();
+        }
+
+        public void Init()
+        {
+
+        }
     }
 }

@@ -63,10 +63,10 @@
 
             <Image x:Name="logo" Grid.Column="2" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,15,0,15" Source="ms-appx:///Assets/logo.png"/>
 
-            <usersControls:HomeButton x:Name="pokedexButton" Grid.Column="2" Grid.Row="2" Tapped="On_Pokedex_Tapped"></usersControls:HomeButton>
-            <usersControls:HomeButton x:Name="combatButton" Grid.Column="2" Grid.Row="3" Tapped="On_Combat_Tapped"></usersControls:HomeButton>
-            <usersControls:HomeButton x:Name="concoursButton" Grid.Column="2" Grid.Row="4" Tapped="On_Concours_Tapped"></usersControls:HomeButton>
-            <usersControls:HomeButton x:Name="promenadeButton" Grid.Column="2" Grid.Row="5" Tapped="On_Promenade_Tapped"></usersControls:HomeButton>
+            <usersControls:HomeButtonUserControl x:Name="pokedexButton" Grid.Column="2" Grid.Row="2" Tapped="On_Pokedex_Tapped"></usersControls:HomeButtonUserControl>
+            <usersControls:HomeButtonUserControl x:Name="combatButton" Grid.Column="2" Grid.Row="3" Tapped="On_Combat_Tapped"></usersControls:HomeButtonUserControl>
+            <usersControls:HomeButtonUserControl x:Name="concoursButton" Grid.Column="2" Grid.Row="4" Tapped="On_Concours_Tapped"></usersControls:HomeButtonUserControl>
+            <usersControls:HomeButtonUserControl x:Name="promenadeButton" Grid.Column="2" Grid.Row="5" Tapped="On_Promenade_Tapped"></usersControls:HomeButtonUserControl>
 
             <TextBlock Grid.Row="2" Grid.Column="2" Margin="6,6,6,6" VerticalAlignment="Center" 
                    HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" FontFamily="Arial" 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ClassLibraryPokemon;
 using Pokemon.Views;
+using Pokemon.UserControls;
 
 namespace Pokemon.ViewModels
 {
@@ -18,5 +19,15 @@ namespace Pokemon.ViewModels
             set { combatView = value; }
         }
 
+        public CombatViewModel(CombatView combatView)
+        {
+            this.CombatView = this.combatView;
+            this.Init();
+        }
+
+        public void Init()
+        {
+
+        }
     }
 }

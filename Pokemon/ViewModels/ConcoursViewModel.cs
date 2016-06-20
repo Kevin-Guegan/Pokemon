@@ -18,5 +18,15 @@ namespace Pokemon.ViewModels
             set { concoursView = value; }
         }
 
+        public ConcoursViewModel(ConcoursView ConcoursView)
+        {
+            this.ConcoursView = this.ConcoursView;
+            this.Init();
+        }
+
+        public void Init()
+        {
+
+        }
     }
 }

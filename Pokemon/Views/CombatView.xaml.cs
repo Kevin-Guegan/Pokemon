@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using Pokemon.Views;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, voir la page http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -30,7 +31,7 @@ namespace Pokemon.Views
 
         private void RetourButton_Click(object sender, RoutedEventArgs e)
         {
-            (Window.Current.Content as Frame).Navigate(typeof(Pokemon.MainPageView));
+            (Window.Current.Content as Frame).Navigate(typeof(MainView));
         }
 
         private void OnTapped_Action1(object sender, TappedRoutedEventArgs e)

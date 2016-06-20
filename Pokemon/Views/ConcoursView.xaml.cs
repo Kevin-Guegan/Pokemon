@@ -1,4 +1,5 @@
 ﻿using Pokemon.ViewModels;
+using ClassLibraryPokemon;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,7 +30,7 @@ namespace Pokemon.Views
         public ConcoursView()
         {
             this.InitializeComponent();
-            DataContext = Dresses.GetDressesList();
+            DataContext = Dress.GetDressesList();
         }
 
         private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)

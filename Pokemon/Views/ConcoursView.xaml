@@ -52,8 +52,8 @@
             </Button.Flyout>
         </Button>
         
-        <usersControls:Menu HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Width="185"
-            Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="6" Grid.RowSpan="5"></usersControls:Menu>
+        <usersControls:MenuUserControl HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Width="185"
+            Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="6" Grid.RowSpan="5"></usersControls:MenuUserControl>
         
         <Grid Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5" Background="Black" Opacity="0.5"></Grid>
 

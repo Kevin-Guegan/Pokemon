@@ -110,7 +110,7 @@
     <Compile Include="Attack.cs" />
     <Compile Include="base\EntityBase.cs" />
     <Compile Include="Dress.cs" />
-    <Compile Include="Pokemons.cs" />
+    <Compile Include="Pokemon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\ClassLibraryPokemon.rd.xml" />
   </ItemGroup>

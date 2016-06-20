@@ -13,7 +13,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Pokemon.ViewsModels;
+using Pokemon.ViewModels;
+using ClassLibraryPokemon;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, voir la page http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -33,7 +34,7 @@ namespace Pokemon.Views
             this.InitializeComponent();
 
             indexListe = 1;
-            var pokemon = Pokemons.GetPokemonById(indexListe);
+            var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
             
             image.Source = pokemon.ImgPokedex;
             NamePokemon.Text = pokemon.Name;
@@ -51,7 +52,7 @@ namespace Pokemon.Views
         private void On_imageNavLeft_Tapped(object sender, TappedRoutedEventArgs e)
         {
             indexListe--;
-            var pokemon = Pokemons.GetPokemonById(indexListe);
+            var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
             if (pokemon != null)
             {
                 image.Source = pokemon.ImgPokedex;
@@ -75,7 +76,7 @@ namespace Pokemon.Views
         private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)
         {
             indexListe++;
-            var pokemon = Pokemons.GetPokemonById(indexListe);
+            var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
             if (pokemon != null)
             {
                 image.Source = pokemon.ImgPokedex;
