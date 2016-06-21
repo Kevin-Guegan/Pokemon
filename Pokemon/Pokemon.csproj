@@ -123,11 +123,11 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\Base\BaseUserControl.cs" />
-    <Compile Include="UserControls\HomeButton.xaml.cs">
-      <DependentUpon>HomeButton.xaml</DependentUpon>
+    <Compile Include="UserControls\HomeButtonUserControl.xaml.cs">
+      <DependentUpon>HomeButtonUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
+    <Compile Include="UserControls\MenuUserControl.xaml.cs">
+      <DependentUpon>MenuUserControl.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -217,11 +217,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\HomeButton.xaml">
+    <Page Include="UserControls\HomeButtonUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\Menu.xaml">
+    <Page Include="UserControls\MenuUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

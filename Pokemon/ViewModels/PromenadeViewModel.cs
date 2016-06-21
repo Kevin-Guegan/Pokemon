@@ -12,11 +12,21 @@ namespace Pokemon.ViewModels
     {
         private PromenadeView promenameView;
 
-        public PromenadeView PromenameView
+        public PromenadeView PromenadeView
         {
             get { return promenameView; }
             set { promenameView = value; }
         }
 
+        public PromenadeViewModel(PromenadeView promenameView)
+        {
+            this.PromenadeView = this.promenameView;
+            this.Init();
+        }
+
+        public void Init()
+        {
+
+        }
     }
 }

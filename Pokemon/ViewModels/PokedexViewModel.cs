@@ -18,5 +18,15 @@ namespace Pokemon.ViewModels
             set { pokedexView = value; }
         }
 
+        public PokedexViewModel(PokedexView PokedexView)
+        {
+            this.PokedexView = this.PokedexView;
+            this.Init();
+        }
+
+        public void Init()
+        {
+
+        }
     }
 }

@@ -27,8 +27,8 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         
-        <usersControls:Menu HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Width="185"
-                Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"></usersControls:Menu>
+        <usersControls:MenuUserControl HorizontalAlignment="Right" VerticalAlignment="Top" Height="50" Width="185"
+                Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"></usersControls:MenuUserControl>
 
         <Image x:Name="Pikachu" Grid.Row="3" Grid.Column="1" Source="ms-appx:///Assets/pikachu_combat.png" Margin="20,0,20,0"/>
         <Image x:Name="PokemonEnnemy" Grid.Row="2" Grid.Column="2" Source="ms-appx:///Assets/carapuce_combat.png" Margin="20,0,20,0"/>

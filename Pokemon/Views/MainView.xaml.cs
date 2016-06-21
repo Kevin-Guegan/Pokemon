@@ -31,7 +31,7 @@ namespace Pokemon.Views
             this.InitializeComponent();
 
             indexListe = 1;
-            var pokemon = Pokemons.GetPokemonById(indexListe);
+            var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
             imageList.Source = pokemon.ImgPokedex;
             //DataContext = Pokemons.GetPokemonsList();
         }
@@ -39,7 +39,7 @@ namespace Pokemon.Views
         private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)
         {
             indexListe++;
-            var pokemon = Pokemons.GetPokemonById(indexListe);
+            var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
             if (pokemon != null)
             {
                 imageList.Source = pokemon.ImgPokedex;
@@ -53,7 +53,7 @@ namespace Pokemon.Views
         private void On_imageNavLeft_Tapped(object sender, TappedRoutedEventArgs e)
         {
             indexListe--;
-            var pokemon = Pokemons.GetPokemonById(indexListe);
+            var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
             if (pokemon != null)
             {
                 imageList.Source = pokemon.ImgPokedex;
@@ -76,7 +76,7 @@ namespace Pokemon.Views
 
         private void On_Concours_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            (Window.Current.Content as Frame).Navigate(typeof(Concours));
+            (Window.Current.Content as Frame).Navigate(typeof(ConcoursView));
         }
 
         private void On_Promenade_Tapped(object sender, TappedRoutedEventArgs e)

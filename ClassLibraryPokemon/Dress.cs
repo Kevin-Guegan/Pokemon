@@ -9,52 +9,52 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace ClassLibraryPokemon
 {
-    public class Dresses : EntityBase
+    public class Dress : EntityBase
     {
         public string Name { get; set; }
         public BitmapImage Img { get; set; }
         public BitmapImage Vignette { get; set; }
 
-        public static List<Dresses> DressesList
+        public static List<Dress> DressesList
         {
             get;
             set;
         }
 
-        public Dresses()
+        public Dress()
         {
 
         }
 
-        public Dresses(string name, BitmapImage img, BitmapImage vignette)
+        public Dress(string name, BitmapImage img, BitmapImage vignette)
         {
             this.Name = name;
             this.Img = img;
             this.Vignette = vignette;
         }
 
-        public static List<Dresses> GetDressesList()
+        public static List<Dress> GetDressesList()
         {
             if (DressesList == null)
             {
-                var list = new List<Dresses>();
+                var list = new List<Dress>();
 
-                list.Add(new Dresses("Haut", 
+                list.Add(new Dress("Haut", 
                     new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-haut.png")), 
                     new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-haut2.png"))));
-                list.Add(new Dresses("Jupe",
+                list.Add(new Dress("Jupe",
                     new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-jupe.png")),
                     new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-jupe2.png"))));
-                list.Add(new Dresses("Noeud",
+                list.Add(new Dress("Noeud",
                     new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-haut.png")),
                     new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-noeud2.png"))));
-                list.Add(new Dresses("Chaussures",
+                list.Add(new Dress("Chaussures",
                     new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-chaussure.png")),
                     new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-chaussure2.png"))));
-                list.Add(new Dresses("Manchettes",
+                list.Add(new Dress("Manchettes",
                     new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-manchette.png")),
                     new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-manchette2.png"))));
-                list.Add(new Dresses("Queue",
+                list.Add(new Dress("Queue",
                     new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-queue.png")),
                     new BitmapImage(new Uri("ms-appx:///Assets/pikachu-beaute-queue2.png"))));
                 DressesList = list;
