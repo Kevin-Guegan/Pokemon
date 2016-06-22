@@ -34,7 +34,7 @@ namespace Pokemon.Views
             this.InitializeComponent();
 
             indexListe = 1;
-            var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
+            /*var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
             
             image.Source = pokemon.ImgPokedex;
             NamePokemon.Text = pokemon.Name;
@@ -46,13 +46,13 @@ namespace Pokemon.Views
             Attaque1.Text = "- " + pokemon.Attaque1;
             Attaque2.Text = "- " + pokemon.Attaque2;
             Attaque3.Text = "- " + pokemon.Attaque3;
-            Attaque4.Text = "- " + pokemon.Attaque4;
+            Attaque4.Text = "- " + pokemon.Attaque4;*/
         }
 
         private void On_imageNavLeft_Tapped(object sender, TappedRoutedEventArgs e)
         {
             indexListe--;
-            var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
+            /*var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
             if (pokemon != null)
             {
                 image.Source = pokemon.ImgPokedex;
@@ -70,13 +70,13 @@ namespace Pokemon.Views
             else
             {
                 indexListe++;
-            }
+            }*/
         }
 
         private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)
         {
             indexListe++;
-            var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
+            /*var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
             if (pokemon != null)
             {
                 image.Source = pokemon.ImgPokedex;
@@ -94,7 +94,7 @@ namespace Pokemon.Views
             else
             {
                 indexListe--;
-            }
+            }*/
         }
     }
 }

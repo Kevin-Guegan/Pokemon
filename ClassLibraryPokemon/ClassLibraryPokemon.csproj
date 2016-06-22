@@ -111,6 +111,7 @@
     <Compile Include="base\EntityBase.cs" />
     <Compile Include="Dress.cs" />
     <Compile Include="Pokemon.cs" />
+    <Compile Include="TypeDePokemonApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\ClassLibraryPokemon.rd.xml" />
   </ItemGroup>

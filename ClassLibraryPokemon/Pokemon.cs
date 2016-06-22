@@ -4,7 +4,7 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace ClassLibraryPokemon
 {
-    public class Pokemon : EntityBase
+    /*public class Pokemon : EntityBase
     {
         public int Id { get; set; }
 
@@ -143,5 +143,5 @@ namespace ClassLibraryPokemon
 
             return PokemonsList;
         }
-    }
+    }*/
 }

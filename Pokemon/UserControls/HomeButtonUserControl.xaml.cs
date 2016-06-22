@@ -12,9 +12,22 @@ namespace Pokemon.UserControls
 {
     public sealed partial class HomeButtonUserControl : BaseUserControl
     {
+        private String homeButtonText;
+
+        public string HomeButtonText
+        {
+            get { return homeButtonText; }
+            set
+            {
+                homeButtonText = value;
+                base.OnPropertyChanged("Home Button Text");
+            }
+        }
+
         public HomeButtonUserControl()
         {
             this.InitializeComponent();
+            base.DataContext = this;
         }
     }
 }
