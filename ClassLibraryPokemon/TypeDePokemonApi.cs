@@ -32,13 +32,8 @@ namespace ClassLibraryPokemon
         //public List<object> zonesid { get; set; }
     }
 
-    public class Trololo
+    /*public class TypeDePokemons
     {
-        //public Pokemon pokemon { get; set; }
-    }
-
-        /*public class TypeDePokemons
-        {
-            public List<TypeDePokemon> typeDePokemon { get; set; }
-        }*/
+        public List<TypeDePokemon> typeDePokemon { get; set; }
+    }*/
 }

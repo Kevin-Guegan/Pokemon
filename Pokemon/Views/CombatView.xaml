@@ -1,4 +1,4 @@
-﻿<Page
+﻿<engagement:EngagementPage
     x:Class="Pokemon.Views.CombatView"
     xmlns:usersControls="using:Pokemon.UserControls"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -6,6 +6,7 @@
     xmlns:local="using:Pokemon.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:engagement="using:Microsoft.Azure.Engagement"
     mc:Ignorable="d">
 
     <Grid>
@@ -74,4 +75,4 @@
 
     </Grid>
 
-</Page>
+</engagement:EngagementPage>

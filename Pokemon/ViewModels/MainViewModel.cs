@@ -61,7 +61,7 @@ namespace Pokemon.ViewModels
             this.Bind();
         }
 
-        public async void Test(int index)
+        public async void SearchPokemon(int index)
         {
             try
             {
@@ -101,7 +101,7 @@ namespace Pokemon.ViewModels
         private void ImageNavRight_Tapped(object sender, TappedRoutedEventArgs e)
         {
             indexListe++;
-            Test(indexListe);
+            SearchPokemon(indexListe);
             this.MainView.PokemonList.Text = typeDePokemon.nom;
             /*var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
             if (pokemon != null)
@@ -117,7 +117,7 @@ namespace Pokemon.ViewModels
         private void ImageNavLeft_Tapped(object sender, TappedRoutedEventArgs e)
         {
             indexListe--;
-            Test(indexListe);
+            SearchPokemon(indexListe);
             this.MainView.PokemonList.Text = typeDePokemon.nom;
             /*var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
             if (pokemon != null)

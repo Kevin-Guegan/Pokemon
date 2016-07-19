@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  Copyright (c) Microsoft Corporation. All rights reserved.
+-->
+<engagement>
+  <agent>
+    <!-- Your application connection string. -->
+    <connectionString>Endpoint=PokemonKGCP.device.mobileengagement.windows.net;SdkKey=d9992c0c5e5ea8e9e8e22e767709b8f8;AppId=nep000147</connectionString>
+
+    <!-- [Optional] Indicate whether the agent have to report crash or not. -->
+    <reportCrash>true</reportCrash>
+  </agent>
+  <reach>
+    <!-- [Optional] Indicate whether the native push (WNS) is activated or not. -->
+    <enableNativePush>true</enableNativePush>
+  </reach>
+</engagement>

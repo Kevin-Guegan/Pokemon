@@ -47,28 +47,5 @@ namespace Pokemon.API
 
             return item;
         }
-
-        /*public async Task<Boolean> PostToApi<T>(T item)
-        {
-            Boolean isOk = false;
-
-            using (Windows.Web.Http.HttpClient client = new Windows.Web.Http.HttpClient())
-            {
-                Windows.Web.Http.HttpRequestMessage message = new Windows.Web.Http.HttpRequestMessage(
-                    Windows.Web.Http.HttpMethod.Post, new Uri("http://pokeapi.co/api/v2/"));
-                message.Content = new Windows.Web.Http.HttpStringContent(
-                    JsonConvert.SerializeObject(item));
-
-                message.Content.Headers.ContentType = new Windows.Web.Http.Headers.HttpMediaTypeHeaderValue("application/json");
-                Windows.Web.Http.HttpResponseMessage response = await client.SendRequestAsync(message);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    isOk = true;
-                }
-            }
-
-            return isOk;
-        }*/
     }
 }
