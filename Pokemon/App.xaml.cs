@@ -42,6 +42,7 @@ namespace Pokemon
         protected override void OnActivated(IActivatedEventArgs args)
         {
             InitEngagement(args);
+            base.OnActivated(args);
         }
 
         /// <summary>
@@ -120,6 +121,7 @@ namespace Pokemon
         // methode pour partager l'initialisation Engagement une fois pour tous les appels
         private void InitEngagement(IActivatedEventArgs e)
         {
+            EngagementAgent.Instance.TestLogLevel = EngagementTestLogLevel.Verbose;
             EngagementAgent.Instance.Init(e);
             EngagementReach.Instance.Init(e);
 

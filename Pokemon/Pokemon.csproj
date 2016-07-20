@@ -17,7 +17,8 @@
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>Pokemon_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>Pokemon_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>16E839C213C708CB5790F25BE20A64E07E18EECC</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
@@ -95,6 +96,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Resources\EngagementConfiguration.xml" />
     <Content Include="Resources\html\EngagementAnnouncement.html" />
     <Content Include="Resources\html\EngagementNotification.html" />
@@ -102,6 +104,7 @@
     <Content Include="Resources\images\EngagementIconNOk.png" />
     <Content Include="Resources\images\EngagementIconNotification.png" />
     <Content Include="Resources\images\EngagementIconOk.png" />
+    <None Include="Pokemon_StoreKey.pfx" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>

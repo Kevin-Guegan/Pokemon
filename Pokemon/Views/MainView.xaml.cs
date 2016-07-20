@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Microsoft.Azure.Engagement;
+using Newtonsoft.Json;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -58,6 +59,18 @@ namespace Pokemon.Views
             this.PokemonList = this.pokemonList;
 
             this.mainViewModel = new MainViewModel(this);
+        }
+        
+        private void Engagement()
+        {
+            String deviceId = EngagementAgent.Instance.GetDeviceId();
+            EngagementReach.Instance.DataPushStringReceived += Instance_DataPushStringReceived;
+        }
+
+        private bool Instance_DataPushStringReceived(string arg)
+        {
+            var item = JsonConvert.DeserializeObject(arg);
+            return true;
         }
     }
 }
