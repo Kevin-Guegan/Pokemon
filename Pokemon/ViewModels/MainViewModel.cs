@@ -41,6 +41,7 @@ namespace Pokemon.ViewModels
             this.MainView = mainView;
             this.ApiManager = apiManager;
             this.Init();
+            this.SQLiteTest();
         }
 
         public async void Init()
@@ -54,7 +55,7 @@ namespace Pokemon.ViewModels
                 typeDePokemons.Add(new TypeDePokemons(typeDePokemon));
             }
 
-            this.MainView.PokemonList.Text = typeDePokemon.nom;
+            this.MainView.PokemonList.Text = typeDePokemon.Nom;
             //this.MainView.ImageList.Source = pokemon.ImgPokedex;
 
             this.MainView.PokedexButton.HomeButtonText = "Pokemon";
@@ -102,7 +103,7 @@ namespace Pokemon.ViewModels
         {
             indexListe++;
             SearchPokemon(indexListe);
-            this.MainView.PokemonList.Text = typeDePokemon.nom;
+            this.MainView.PokemonList.Text = typeDePokemon.Nom;
             /*var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
             if (pokemon != null)
             {
@@ -118,7 +119,7 @@ namespace Pokemon.ViewModels
         {
             indexListe--;
             SearchPokemon(indexListe);
-            this.MainView.PokemonList.Text = typeDePokemon.nom;
+            this.MainView.PokemonList.Text = typeDePokemon.Nom;
             /*var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
             if (pokemon != null)
             {
@@ -148,6 +149,18 @@ namespace Pokemon.ViewModels
         private void PokedexButton_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
             (Window.Current.Content as Frame).Navigate(typeof(PokedexView));
+        }
+
+        private void SQLiteTest()
+        {
+            SQLiteManager<TypeDePokemons> manager = new SQLiteManager<TypeDePokemons>();
+            TypeDePokemons pokemon1 = new TypeDePokemons();
+            pokemon1.Id = 1;
+            pokemon1.Nom = "Pikachu";
+            pokemon1.IdPokedex = 25;            
+            manager.Insert(pokemon1);
+            var result = manager.Get(pokemon1);
+            //var result = manager.Get(1);
         }
     }
 }

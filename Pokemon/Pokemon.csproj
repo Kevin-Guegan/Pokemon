@@ -96,7 +96,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Package.StoreAssociation.xml" />
+    <None Include="Package.StoreAssociation.xml">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Resources\EngagementConfiguration.xml" />
     <Content Include="Resources\html\EngagementAnnouncement.html" />
     <Content Include="Resources\html\EngagementNotification.html" />
@@ -113,6 +115,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resources\overlay\EngagementPageOverlay.cs" />
+    <Compile Include="SQLite\SQLiteManager.cs" />
     <Compile Include="ViewModels\CombatViewModel.cs" />
     <Compile Include="ViewModels\ConcoursViewModel.cs" />
     <Compile Include="ViewModels\PokedexViewModel.cs" />
@@ -244,7 +247,11 @@
       <Name>ClassLibraryPokemon</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <SDKReference Include="SQLite.UWP.2015, Version=3.13.0">
+      <Name>SQLite for Universal Windows Platform</Name>
+    </SDKReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
