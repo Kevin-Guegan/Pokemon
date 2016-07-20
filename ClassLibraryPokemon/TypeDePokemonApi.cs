@@ -30,7 +30,7 @@ namespace ClassLibraryPokemon
         private int pv;
         private int id_pokedex;
 
-
+ 
         [PrimaryKey, AutoIncrement]
         [Column("id")]
         public int Id

@@ -162,5 +162,12 @@ namespace Pokemon.ViewModels
             var result = manager.Get(pokemon1);
             //var result = manager.Get(1);
         }
+
+        public void SQLiteTest2()
+        {
+            SQLiteManager<TypeDePokemons> manager = new SQLiteManager<TypeDePokemons>();
+
+            //TypeDePokemons pokemon = generatorTypeDePokemon.GenerateItem();
+        }
     }
 }

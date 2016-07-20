@@ -1,4 +1,6 @@
-﻿using SQLite.Net;
+﻿using ClassLibraryPokemon;
+using SQLite.Net;
+using SQLiteNetExtensions.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +10,7 @@ using Windows.Storage;
 
 namespace Pokemon
 {
-    class SQLiteManager<T> : SQLiteConnection where T : class
+    class SQLiteManager<T> : SQLiteConnection where T : EntityBase
     {
         public SQLiteManager() : base(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(),
             ApplicationData.Current.LocalFolder.Path + "\\SQLiteDB")
@@ -27,6 +29,11 @@ namespace Pokemon
         {
             //this.Insert(item);
             this.InsertOrReplace(item);
+        }
+
+        public void InsertAll(List<T> items)
+        {
+            this.InsertAllWithChildren(items);
         }
 
         public T Get(T item)
