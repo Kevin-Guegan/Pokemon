@@ -1,4 +1,6 @@
 ﻿using ClassLibraryPokemon;
+using Pokemon.UserControls;
+using Pokemon.ViewModels;
 using Pokemon.Views;
 using System;
 using System.Collections.Generic;
@@ -14,6 +16,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.Azure.Engagement;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -24,69 +27,37 @@ namespace Pokemon.Views
     /// </summary>
     public sealed partial class MainView : Page
     {
-        public int indexListe;
+        private MainViewModel mainViewModel;
+
+        public HomeButtonUserControl PokedexButton { get; set; }
+        public HomeButtonUserControl CombatButton { get; set; }
+        public HomeButtonUserControl ConcoursButton { get; set; }
+        public HomeButtonUserControl PromenadeButton { get; set; }
+        public Button ExitButton { get; set; }
+
+        public Image ImageNavLeft { get; set; }
+        public Image ImageNavRight { get; set; }
+        public Image ImageList { get; set; }
+
+        public TextBlock PokemonList { get; set; }
 
         public MainView()
         {
             this.InitializeComponent();
 
-            indexListe = 1;
-            var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
-            imageList.Source = pokemon.ImgPokedex;
-            //DataContext = Pokemons.GetPokemonsList();
-        }
+            this.PokedexButton = this.pokedexButton;
+            this.CombatButton = this.combatButton;
+            this.ConcoursButton = this.concoursButton;
+            this.PromenadeButton = this.promenadeButton;
+            this.ExitButton = this.exitButton;
 
-        private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            indexListe++;
-            var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
-            if (pokemon != null)
-            {
-                imageList.Source = pokemon.ImgPokedex;
-            }
-            else
-            {
-                indexListe--;
-            }
-        }
+            this.ImageNavLeft = this.imageNavLeft;
+            this.ImageNavRight = this.imageNavRight;
+            this.ImageList = this.imageList;
 
-        private void On_imageNavLeft_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            indexListe--;
-            var pokemon = ClassLibraryPokemon.Pokemon.GetPokemonById(indexListe);
-            if (pokemon != null)
-            {
-                imageList.Source = pokemon.ImgPokedex;
-            }
-            else
-            {
-                indexListe++;
-            }
-        }
+            this.PokemonList = this.pokemonList;
 
-        private void On_Pokedex_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            (Window.Current.Content as Frame).Navigate(typeof(PokedexView));
-        }
-
-        private void On_Combat_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            (Window.Current.Content as Frame).Navigate(typeof(CombatView));
-        }
-
-        private void On_Concours_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            (Window.Current.Content as Frame).Navigate(typeof(ConcoursView));
-        }
-
-        private void On_Promenade_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            (Window.Current.Content as Frame).Navigate(typeof(PromenadeView));
-        }
-
-        private void ExitButtonOnTapped(object sender, TappedRoutedEventArgs e)
-        {
-            Application.Current.Exit();
+            this.mainViewModel = new MainViewModel(this);
         }
     }
 }

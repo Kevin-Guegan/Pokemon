@@ -47,8 +47,8 @@
                 </Grid.RowDefinitions>
                 <Grid Background="Black" Padding="5" Opacity="0.5" CornerRadius="25"
                 Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="3" BorderThickness="0,0,-35,0"></Grid>
-                <Button x:Name="buttonExit" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Stretch" 
-                VerticalAlignment="Stretch" Tapped="ExitButtonOnTapped">
+                <Button x:Name="exitButton" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Grid>
@@ -63,33 +63,37 @@
 
             <Image x:Name="logo" Grid.Column="2" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,15,0,15" Source="ms-appx:///Assets/logo.png"/>
 
-            <usersControls:HomeButtonUserControl x:Name="pokedexButton" Grid.Column="2" Grid.Row="2" Tapped="On_Pokedex_Tapped"></usersControls:HomeButtonUserControl>
-            <usersControls:HomeButtonUserControl x:Name="combatButton" Grid.Column="2" Grid.Row="3" Tapped="On_Combat_Tapped"></usersControls:HomeButtonUserControl>
-            <usersControls:HomeButtonUserControl x:Name="concoursButton" Grid.Column="2" Grid.Row="4" Tapped="On_Concours_Tapped"></usersControls:HomeButtonUserControl>
-            <usersControls:HomeButtonUserControl x:Name="promenadeButton" Grid.Column="2" Grid.Row="5" Tapped="On_Promenade_Tapped"></usersControls:HomeButtonUserControl>
+            <usersControls:HomeButtonUserControl x:Name="pokedexButton" Grid.Column="2" Grid.Row="2"></usersControls:HomeButtonUserControl>
+            <usersControls:HomeButtonUserControl x:Name="combatButton" Grid.Column="2" Grid.Row="3"></usersControls:HomeButtonUserControl>
+            <usersControls:HomeButtonUserControl x:Name="concoursButton" Grid.Column="2" Grid.Row="4"></usersControls:HomeButtonUserControl>
+            <usersControls:HomeButtonUserControl x:Name="promenadeButton" Grid.Column="2" Grid.Row="5"></usersControls:HomeButtonUserControl>
 
             <TextBlock Grid.Row="2" Grid.Column="2" Margin="6,6,6,6" VerticalAlignment="Center" 
                    HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" FontFamily="Arial" 
-                   FontSize="26.667" Padding="0,0,0,15" Tapped="On_Pokedex_Tapped">Pokedex</TextBlock>
+                   FontSize="26.667" Padding="0,0,0,15">Pokedex</TextBlock>
             <TextBlock Grid.Row="3" Grid.Column="2" Margin="6,6,6,6" VerticalAlignment="Center" 
                    HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" FontFamily="Arial" 
-                   FontSize="26.667" Padding="0,0,0,15" Tapped="On_Combat_Tapped">Combat</TextBlock>
+                   FontSize="26.667" Padding="0,0,0,15">Combat</TextBlock>
             <TextBlock Grid.Row="4" Grid.Column="2" Margin="6,6,6,6" VerticalAlignment="Center" 
                    HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" FontFamily="Arial" 
-                   FontSize="26.667" Padding="0,0,0,15" Tapped="On_Concours_Tapped">Beauté</TextBlock>
+                   FontSize="26.667" Padding="0,0,0,15">Beauté</TextBlock>
             <TextBlock Grid.Row="5" Grid.Column="2" Margin="6,6,6,6" VerticalAlignment="Center" 
                    HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" FontFamily="Arial" 
-                   FontSize="26.667" Padding="0,0,0,15" Tapped="On_Promenade_Tapped">Promenade</TextBlock>
+                   FontSize="26.667" Padding="0,0,0,15">Promenade</TextBlock>
 
             <Image Grid.Row="6" Grid.Column="1" x:Name="imageNavLeft" Height="30" Width="31" HorizontalAlignment="Right" Margin="0,0,2,0"
-                   Source="ms-appx:///Assets/bg_nav_left.png" Tapped="On_imageNavLeft_Tapped">
+                   Source="ms-appx:///Assets/bg_nav_left.png">
             </Image>
             <Image Grid.Row="6" Grid.Column="3" x:Name="imageNavRight" Height="30" Width="31" HorizontalAlignment="Left" Margin="3,0,0,0"
-                   Source="ms-appx:///Assets/bg_nav_right.png" Tapped="On_imageNavRight_Tapped">
+                   Source="ms-appx:///Assets/bg_nav_right.png">
             </Image>
 
             <Image x:Name="imageList" Grid.Column="2" Grid.Row="6" Margin="0,15,0,15" 
                    HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+
+            <TextBlock x:Name="pokemonList" Grid.Row="6" Grid.Column="2" Margin="6,6,6,6" VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Arial" 
+                   FontSize="26.667" Padding="0,0,0,15"/>
         </Grid>
 
         <VisualStateManager.VisualStateGroups>

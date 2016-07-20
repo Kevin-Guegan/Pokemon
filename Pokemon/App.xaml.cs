@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.Azure.Engagement;
 
 namespace Pokemon
 {
@@ -37,12 +38,21 @@ namespace Pokemon
         }
 
         /// <summary>
+        /// </summary>
+        protected override void OnActivated(IActivatedEventArgs args)
+        {
+            InitEngagement(args);
+        }
+
+        /// <summary>
         /// Invoqué lorsque l'application est lancée normalement par l'utilisateur final.  D'autres points d'entrée
         /// seront utilisés par exemple au moment du lancement de l'application pour l'ouverture d'un fichier spécifique.
         /// </summary>
         /// <param name="e">Détails concernant la requête et le processus de lancement.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+
+            InitEngagement(e);
 
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
@@ -104,6 +114,18 @@ namespace Pokemon
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: enregistrez l'état de l'application et arrêtez toute activité en arrière-plan
             deferral.Complete();
+        }
+
+        // azure mobile engagement
+        // methode pour partager l'initialisation Engagement une fois pour tous les appels
+        private void InitEngagement(IActivatedEventArgs e)
+        {
+            EngagementAgent.Instance.Init(e);
+            EngagementReach.Instance.Init(e);
+
+            // or
+
+            //EngagementAgent.Instance.Init(e, engagementConfiguration);
         }
     }
 }
