@@ -3,6 +3,29 @@
   "version": 2,
   "targets": {
     "UAP,Version=v10.0": {
+      "Faker.Net.Portable/2.2.0.64": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll": {}
+        },
+        "resource": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/de-DE/Faker.Portable.resources.dll": {
+            "locale": "de-DE"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/en-US/Faker.Portable.resources.dll": {
+            "locale": "en-US"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/nb-NO/Faker.Portable.resources.dll": {
+            "locale": "nb-NO"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/pt-BR/Faker.Portable.resources.dll": {
+            "locale": "pt-BR"
+          }
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -1930,6 +1953,29 @@
       }
     },
     "UAP,Version=v10.0/win10-arm": {
+      "Faker.Net.Portable/2.2.0.64": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll": {}
+        },
+        "resource": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/de-DE/Faker.Portable.resources.dll": {
+            "locale": "de-DE"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/en-US/Faker.Portable.resources.dll": {
+            "locale": "en-US"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/nb-NO/Faker.Portable.resources.dll": {
+            "locale": "nb-NO"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/pt-BR/Faker.Portable.resources.dll": {
+            "locale": "pt-BR"
+          }
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -3714,6 +3760,29 @@
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
+      "Faker.Net.Portable/2.2.0.64": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll": {}
+        },
+        "resource": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/de-DE/Faker.Portable.resources.dll": {
+            "locale": "de-DE"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/en-US/Faker.Portable.resources.dll": {
+            "locale": "en-US"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/nb-NO/Faker.Portable.resources.dll": {
+            "locale": "nb-NO"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/pt-BR/Faker.Portable.resources.dll": {
+            "locale": "pt-BR"
+          }
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -5461,6 +5530,29 @@
       }
     },
     "UAP,Version=v10.0/win10-x64": {
+      "Faker.Net.Portable/2.2.0.64": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll": {}
+        },
+        "resource": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/de-DE/Faker.Portable.resources.dll": {
+            "locale": "de-DE"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/en-US/Faker.Portable.resources.dll": {
+            "locale": "en-US"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/nb-NO/Faker.Portable.resources.dll": {
+            "locale": "nb-NO"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/pt-BR/Faker.Portable.resources.dll": {
+            "locale": "pt-BR"
+          }
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -7252,6 +7344,29 @@
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
+      "Faker.Net.Portable/2.2.0.64": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll": {}
+        },
+        "resource": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/de-DE/Faker.Portable.resources.dll": {
+            "locale": "de-DE"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/en-US/Faker.Portable.resources.dll": {
+            "locale": "en-US"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/nb-NO/Faker.Portable.resources.dll": {
+            "locale": "nb-NO"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/pt-BR/Faker.Portable.resources.dll": {
+            "locale": "pt-BR"
+          }
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -8999,6 +9114,29 @@
       }
     },
     "UAP,Version=v10.0/win10-x86": {
+      "Faker.Net.Portable/2.2.0.64": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll": {}
+        },
+        "resource": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/de-DE/Faker.Portable.resources.dll": {
+            "locale": "de-DE"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/en-US/Faker.Portable.resources.dll": {
+            "locale": "en-US"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/nb-NO/Faker.Portable.resources.dll": {
+            "locale": "nb-NO"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/pt-BR/Faker.Portable.resources.dll": {
+            "locale": "pt-BR"
+          }
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -10790,6 +10928,29 @@
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
+      "Faker.Net.Portable/2.2.0.64": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll": {}
+        },
+        "resource": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/de-DE/Faker.Portable.resources.dll": {
+            "locale": "de-DE"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/en-US/Faker.Portable.resources.dll": {
+            "locale": "en-US"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/nb-NO/Faker.Portable.resources.dll": {
+            "locale": "nb-NO"
+          },
+          "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/pt-BR/Faker.Portable.resources.dll": {
+            "locale": "pt-BR"
+          }
+        }
+      },
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -12538,6 +12699,20 @@
     }
   },
   "libraries": {
+    "Faker.Net.Portable/2.2.0.64": {
+      "sha512": "0devFDDlt0b0mtKU2XPu1LyG6XS8feC7GaN0kUaVnIPRam7hNjdGxCBza2Nmwkmwh5ytAu0oz11HuGS0EDVx2w==",
+      "type": "package",
+      "files": [
+        "Faker.Net.Portable.2.2.0.64.nupkg.sha512",
+        "Faker.Net.Portable.nuspec",
+        "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.dll",
+        "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/Faker.Portable.xml",
+        "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/de-DE/Faker.Portable.resources.dll",
+        "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/en-US/Faker.Portable.resources.dll",
+        "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/nb-NO/Faker.Portable.resources.dll",
+        "lib/portable-net4+sl5+wp8+win8+wpa81+netcore45+MonoAndroid+Xamarin.iOS1/pt-BR/Faker.Portable.resources.dll"
+      ]
+    },
     "Microsoft.CSharp/4.0.0": {
       "sha512": "oWqeKUxHXdK6dL2CFjgMcaBISbkk+AqEg+yvJHE4DElNzS4QaTsCflgkkqZwVlWby1Dg9zo9n+iCAMFefFdJ/A==",
       "type": "Package",
@@ -15968,6 +16143,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "Faker.Net.Portable >= 2.2.0.64",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
       "SQLite.Net-PCL >= 3.1.1",
       "SQLiteNetExtensions >= 1.3.0"

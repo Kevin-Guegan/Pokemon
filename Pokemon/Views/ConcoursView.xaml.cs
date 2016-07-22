@@ -30,7 +30,7 @@ namespace Pokemon.Views
         public ConcoursView()
         {
             this.InitializeComponent();
-            DataContext = Dress.GetDressesList();
+            DataContext = Dress_old.GetDressesList();
         }
 
         private void On_imageNavRight_Tapped(object sender, TappedRoutedEventArgs e)

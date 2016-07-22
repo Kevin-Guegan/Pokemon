@@ -28,7 +28,9 @@ namespace ClassLibraryPokemon
         private int defence_spe;
         private int vitesse;
         private int pv;
-        private int id_pokedex;
+        private Types type;
+        private List<TypeDePokemons> typePokemon;
+        private Pokedexs pokedex;
 
  
         [PrimaryKey, AutoIncrement]
@@ -88,24 +90,10 @@ namespace ClassLibraryPokemon
             set { pv = value; }
         }
 
-        [Column("id_pokedex")]
-        public int IdPokedex
-        {
-            get { return id_pokedex; }
-            set { id_pokedex = value; }
-        }
-
-        //public List<object> typesid { get; set; }
-        //public List<object> zonesid { get; set; }
 
         public override string ToString()
         {
             return this.Id.ToString();
         }
     }
-
-    /*public class TypeDePokemons
-    {
-        public List<TypeDePokemon> typeDePokemon { get; set; }
-    }*/
 }

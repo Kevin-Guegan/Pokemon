@@ -1,6 +1,6 @@
 ﻿namespace ClassLibraryPokemon
 {
-    public class Attack : EntityBase
+    public class Attack_old : EntityBase
     {
     }
 }

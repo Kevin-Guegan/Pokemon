@@ -116,8 +116,18 @@
     </Compile>
     <Compile Include="Resources\overlay\EngagementPageOverlay.cs" />
     <Compile Include="SQLite\SQLiteManager.cs" />
+    <Compile Include="UserControls\ExitUserControl.xaml.cs">
+      <DependentUpon>ExitUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LogoUserControl.xaml.cs">
+      <DependentUpon>LogoUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PopupUserControl.xaml.cs">
+      <DependentUpon>PopupUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\CombatViewModel.cs" />
     <Compile Include="ViewModels\ConcoursViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\PokedexViewModel.cs" />
     <Compile Include="ViewModels\PromenadeViewModel.cs" />
     <Compile Include="Views\CombatView.xaml.cs">
@@ -127,6 +137,9 @@
       <DependentUpon>ConcoursView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
@@ -212,11 +225,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="UserControls\ExitUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\LogoUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PopupUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CombatView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConcoursView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

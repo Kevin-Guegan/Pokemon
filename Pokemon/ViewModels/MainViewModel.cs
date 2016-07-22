@@ -88,15 +88,9 @@ namespace Pokemon.ViewModels
             this.MainView.CombatButton.Tapped += CombatButton_Tapped;
             this.MainView.ConcoursButton.Tapped += ConcoursButton_Tapped;
             this.MainView.PromenadeButton.Tapped += PromenadeButton_Tapped;
-            this.MainView.ExitButton.Tapped += ExitButton_Tapped;
 
             this.MainView.ImageNavLeft.Tapped += ImageNavLeft_Tapped;
             this.MainView.ImageNavRight.Tapped += ImageNavRight_Tapped;
-        }
-
-        private void ExitButton_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Application.Current.Exit();
         }
 
         private void ImageNavRight_Tapped(object sender, TappedRoutedEventArgs e)

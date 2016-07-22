@@ -50,7 +50,6 @@ namespace Pokemon.Views
             this.CombatButton = this.combatButton;
             this.ConcoursButton = this.concoursButton;
             this.PromenadeButton = this.promenadeButton;
-            this.ExitButton = this.exitButton;
 
             this.ImageNavLeft = this.imageNavLeft;
             this.ImageNavRight = this.imageNavRight;
